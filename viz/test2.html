@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+    <meta charset="utf-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.5/nv.d3.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.5/nv.d3.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+<div id="chart-area">
+</div>
+
+</body>
+<script>
+
+function drawchart(data){
+
+	d3.select("#chart-area").
+	selectAll("div")
+	.data(data)
+	.enter()
+	.append("div")
+	.attr("id" , function(d){
+
+		return d.index_name.replace(/ /g,'').replace(/[{(*:)}]/g, '');
+	})
+	.each(function(d){add_line_graphs(d);});
+	//.each(add_line_graphs);
+}
+
+function find_years(data) {
+
+        obj_keys = Object.keys(data)
+
+        var streamData = {}
+        streamData["key"] = data.index_name
+        streamData["values"] = []
+        streamData["unit"] = data.unit
+
+        for (var j = 0; j < obj_keys.length; j++) {
+            if (parseInt(obj_keys[j][0]) == 2) {
+
+               
+                if (!isNaN(parseFloat(data[obj_keys[j]]))) {
+                    var temp = new Object();
+                    temp.label = parseInt(obj_keys[j].substring(0,4));
+                    temp.value = data[obj_keys[j]];
+                    streamData["values"].push(temp);
+                }
+            }
+
+        }
+
+        return [streamData];
+    }
+
+	
+
+
+function add_line_graphs(data){
+
+	
+	 
+	nv.addGraph(function() {
+
+
+        streamData = find_years(data)
+    console.log(data,streamData)
+
+
+        chart = nv.models.lineChart()
+            .options({
+                duration: 300,
+                useInteractiveGuideline: true
+            }).x(function(d) {
+
+                    return d.label
+                })
+            .y(function(d){
+            	return parseFloat(d.value);
+            })
+        ;
+        
+
+        chart.xAxis
+            .axisLabel("Time (s)")
+            .tickFormat(d3.format(',.1f'))
+            .staggerLabels(true)
+        ;
+        chart.yAxis
+        
+            .tickFormat(function(d) {
+                if (d == null) {
+                    return 'N/A';
+                }
+                return d3.format(',.2f')(d);
+            });
+
+        chart.width(300)
+        d3.select("#"+data.index_name.replace(/ /g,'').replace(/[{(*:)}]/g, '')).append("div").text(data.index_name)
+        console.log(d3.select("#"+data.index_name.replace(/ /g,'').replace(/[{(*:)}]/g, '')))
+        d3.select("#"+data.index_name.replace(/ /g,'').replace(/[{(*:)}]/g, '')).append('svg')
+            .datum(streamData)
+            .call(chart);
+        nv.utils.windowResize(chart.update);
+        return chart;
+    });
+}
+d3.csv("./data/adivasis.csv", function(error, data) {
+	console.log(data)
+	drawchart(data)
+        //populateSelection(data)
+        /*for (var j=0; j<data.length;j++)
+        {
+        	drawchart(find_years(data[j]))
+    	}*/
+    })
+
+</script>
+</html>
