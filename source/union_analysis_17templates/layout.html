@@ -1,0 +1,18 @@
+{% extends "!layout.html" %}
+{% block sidebartitle %}
+    <a href="{{ pathto(master_doc) }}"><img src='_static/logo.png'/></a>
+    {% if logo and theme_logo_only %}
+        <a class="project-title" href="{{ pathto(master_doc) }}">
+    {% else %}
+        <a class="project-title" href="{{ pathto(master_doc) }}"> {{ project }}
+    {% endif %}
+
+    {% if logo %}
+        {# Not strictly valid HTML, but it's the only way to display/scale it properly, without weird scripting or heaps of work #}
+        <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" />
+    {% endif %}
+        </a>
+
+    {% include "searchbox.html" %}
+
+{% endblock %}

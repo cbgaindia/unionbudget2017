@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.5/nv.d3.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.5/nv.d3.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/f1a01896135ab378aa5c0118eadd81da55e698d8/canvas-toBlob.js"></script>
+    <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"></script>
+    <style>
+    svg {
+        display: block;
+    }
+    
+    html,
+    body,
+    #chart1,
+    svg {
+        margin: 0px;
+        padding: 0px;
+        background: white;
+        min-height: 450px;
+        height: 100%;
+        width: 100%;
+    }
+    
+    svg.nvd3-svg {
+        background: white;
+    }
+    
+    .caret-up {
+        width: 0;
+        height: 0;
+        border-left: 4px solid rgba(0, 0, 0, 0);
+        border-right: 4px solid rgba(0, 0, 0, 0);
+        border-bottom: 4px solid;
+        display: inline-block;
+        margin-left: 2px;
+        vertical-align: middle;
+    }
+    
+    .particular-select {
+        margin-left: 20px;
+    }
+    
+    div#indicator-name {
+        margin-top: 40px;
+        font-weight: 900;
+        font-size: 20px;
+    }
+    
+    button#saveButton {
+        float: right;
+    }
+    </style>
+    <style>
+    .bs-example>.btn,
+    .bs-example>.btn-group {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .btn-group,
+    .btn-group-vertical {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .open>.dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 2px 0 0;
+        font-size: 14px;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: 4px;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    }
+    
+    ol,
+    ul {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    
+    .btn-group-vertical>.btn,
+    .btn-group>.btn {
+        position: relative;
+        float: left;
+    }
+    
+    .btn-default {
+        color: #FFF;
+        background-color: #40627C;
+        border-color: #ccc;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    
+    button,
+    input,
+    select,
+    textarea {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+    
+    button,
+    select {
+        text-transform: none;
+    }
+    
+    button {
+        overflow: visible;
+    }
+    
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+    
+    .dropdown-menu>li>a {
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.42857143;
+        color: #333;
+        white-space: nowrap;
+    }
+    
+    a {
+        color: #337ab7;
+        text-decoration: none;
+    }
+    
+    a {
+        background-color: transparent;
+    }
+    
+    .btn-group .dropdown-toggle:active,
+    .btn-group.open .dropdown-toggle {
+        outline: 0;
+    }
+    
+    .btn-group.open .dropdown-toggle {
+        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    }
+    
+    .btn-group.open .dropdown-toggle.btn-link {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    
+    .btn:active {
+        padding: 6px 12px;
+    }
+    
+    .wy-plain-list-disc li,
+    .rst-content .section ul li,
+    .rst-content .toctree-wrapper ul li,
+    article ul li {
+        list-style: none;
+        margin-left: 0px;
+    }
+    
+    .btn:hover,
+    .btn:focus {
+        background: #40627C;
+        color: #fff;
+    }
+    
+    @media(max-width: 480px) {
+        .nvd3 .nv-discretebar .nv-groups text {
+            display: none;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <button type="button" class="btn btn-default" id='saveButton'>Download Visualization as Image</button>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select Indicator <span class="caret"></span>
+        </button>
+        <ul class="indicator-select dropdown-menu">
+        </ul>
+    </div>
+    <br>
+    <div id="indicator-name">
+    </div>
+    <div id="chart1">
+        <svg id="chartsvg"></svg>
+    </div>
+    <script>
+    + function($) {
+        'use strict';
+
+        // DROPDOWN CLASS DEFINITION
+        // =========================
+
+        var backdrop = '.dropdown-backdrop'
+        var toggle = '[data-toggle="dropdown"]'
+        var Dropdown = function(element) {
+            $(element).on('click.bs.dropdown', this.toggle)
+        }
+
+        Dropdown.VERSION = '3.3.7'
+
+        function getParent($this) {
+            var selector = $this.attr('data-target')
+
+            if (!selector) {
+                selector = $this.attr('href')
+                selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+            }
+
+            var $parent = selector && $(selector)
+
+            return $parent && $parent.length ? $parent : $this.parent()
+        }
+
+        function clearMenus(e) {
+            if (e && e.which === 3) return
+            $(backdrop).remove()
+            $(toggle).each(function() {
+                var $this = $(this)
+                var $parent = getParent($this)
+                var relatedTarget = {
+                    relatedTarget: this
+                }
+
+                if (!$parent.hasClass('open')) return
+
+                if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains($parent[0], e.target)) return
+
+                $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
+
+                if (e.isDefaultPrevented()) return
+
+                $this.attr('aria-expanded', 'false')
+                $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
+            })
+        }
+
+        Dropdown.prototype.toggle = function(e) {
+            var $this = $(this)
+
+            if ($this.is('.disabled, :disabled')) return
+
+            var $parent = getParent($this)
+            var isActive = $parent.hasClass('open')
+
+            clearMenus()
+
+            if (!isActive) {
+                if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
+                    // if mobile we use a backdrop because click events don't delegate
+                    $(document.createElement('div'))
+                        .addClass('dropdown-backdrop')
+                        .insertAfter($(this))
+                        .on('click', clearMenus)
+                }
+
+                var relatedTarget = {
+                    relatedTarget: this
+                }
+                $parent.trigger(e = $.Event('show.bs.dropdown', relatedTarget))
+
+                if (e.isDefaultPrevented()) return
+
+                $this
+                    .trigger('focus')
+                    .attr('aria-expanded', 'true')
+
+                $parent
+                    .toggleClass('open')
+                    .trigger($.Event('shown.bs.dropdown', relatedTarget))
+            }
+
+            return false
+        }
+
+        Dropdown.prototype.keydown = function(e) {
+            if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return
+
+            var $this = $(this)
+
+            e.preventDefault()
+            e.stopPropagation()
+
+            if ($this.is('.disabled, :disabled')) return
+
+            var $parent = getParent($this)
+            var isActive = $parent.hasClass('open')
+
+            if (!isActive && e.which != 27 || isActive && e.which == 27) {
+                if (e.which == 27) $parent.find(toggle).trigger('focus')
+                return $this.trigger('click')
+            }
+
+            var desc = ' li:not(.disabled):visible a'
+            var $items = $parent.find('.dropdown-menu' + desc)
+
+            if (!$items.length) return
+
+            var index = $items.index(e.target)
+
+            if (e.which == 38 && index > 0) index-- // up
+                if (e.which == 40 && index < $items.length - 1) index++ // down
+                    if (!~index) index = 0
+
+            $items.eq(index).trigger('focus')
+        }
+
+
+        // DROPDOWN PLUGIN DEFINITION
+        // ==========================
+
+        function Plugin(option) {
+            return this.each(function() {
+                var $this = $(this)
+                var data = $this.data('bs.dropdown')
+
+                if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
+                if (typeof option == 'string') data[option].call($this)
+            })
+        }
+
+        var old = $.fn.dropdown
+
+        $.fn.dropdown = Plugin
+        $.fn.dropdown.Constructor = Dropdown
+
+
+        // DROPDOWN NO CONFLICT
+        // ====================
+
+        $.fn.dropdown.noConflict = function() {
+            $.fn.dropdown = old
+            return this
+        }
+
+
+        // APPLY TO STANDARD DROPDOWN ELEMENTS
+        // ===================================
+
+        $(document)
+            .on('click.bs.dropdown.data-api', clearMenus)
+            .on('click.bs.dropdown.data-api', '.dropdown form', function(e) {
+                e.stopPropagation()
+            })
+            .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
+            .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
+            .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
+
+    }(jQuery);
+    </script>
+    <script>
+    function find_years(data) {
+
+        obj_keys = Object.keys(data)
+
+        var streamData = {}
+        streamData["key"] = data.index_name
+        streamData["values"] = []
+        streamData["unit"] = data.unit
+
+        for (var j = 0; j < obj_keys.length; j++) {
+            if (parseInt(obj_keys[j][0]) == 2) {
+
+
+                if (!isNaN(parseFloat(data[obj_keys[j]]))) {
+                    var temp = new Object();
+                    temp.label = obj_keys[j];
+                    temp.value = data[obj_keys[j]];
+                    streamData["values"].push(temp);
+                }
+            }
+
+        }
+
+        return [streamData];
+    }
+
+    function populateSelection(data) {
+
+        var select = d3.select(".indicator-select")
+            .selectAll("li")
+            .data(data)
+            .enter().append("li")
+            .attr("class", function(d, i) {
+
+                /*if (i == 0) {
+                    return "active";
+                }*/
+            })
+            .classed("elem", true)
+
+        .on("click", function(d) {
+            drawchart(find_years(d));
+        })
+
+        select.append("a")
+            .attr({
+                onclick: "return false;",
+                href: "#"
+            })
+            .text(function(d) {
+                return d.index_name
+            })
+    }
+
+
+    var formatNumber = d3.format(".1f"),
+        formatCrore = function(x) {
+            return formatNumber(x / 1e7) + "Cr";
+        },
+        formatLakh = function(x) {
+            return formatNumber(x / 1e5) + "L";
+        },
+        formatThousand = function(x) {
+            return formatNumber(x / 1e3) + "k";
+        },
+        formatLowerDenom = function(x) {
+            return x;
+        };
+
+    function formatAbbr(x) {
+        var v = Math.abs(x);
+        return (v >= .9995e7 ? formatCrore : v >= .9995e5 ? formatLakh : v >= .999e3 ? formatThousand : formatLowerDenom)(x);
+    }
+
+
+    function drawchart(data) {
+        //d3.select("#indicator-name").text(data[0].key)
+        console.log(data)
+        d3.select('#chart1 svg')
+            .append("text")
+            .attr("class", "header")
+            .attr("x", 50)
+            .attr("y", 20)
+            .text(data[0].key);
+
+        nv.addGraph(function() {
+            var chart = nv.models.discreteBarChart()
+                .x(function(d) {
+                    return d.label
+                })
+                .staggerLabels(false)
+                //.staggerLabels(historicalBarChart[0].values.length > 8)
+                .showValues(true)
+                .duration(250)
+                .color(["#10222B"]);
+
+            var unit = data[0].unit;
+
+
+            chart.margin({
+                "left": 70,
+                "right": 10,
+                "top": 50,
+                "bottom": 90
+            })
+
+
+            chart.yAxis.ticks(10)
+                .tickFormat(function(d) {
+                    return formatAbbr(d)
+                })
+                .axisLabel(data[0].unit)
+                .axisLabelDistance(0)
+                .tickPadding(5);
+
+            chart.xAxis.ticks(10)
+                .axisLabel("Years")
+                .tickPadding(15)
+
+            if (screen.width < 480) {
+                chart.xAxis
+                    .axisLabelDistance(40)
+
+                chart.rotateLabels(-40)
+            } else {
+                chart.xAxis
+                    .axisLabelDistance(10)
+            }
+
+
+            chart.wrapLabels(true)
+
+            chart.y(function(d) {
+                return parseFloat(d.value)
+            })
+
+            chart.tooltip.valueFormatter(function(d) {
+                return d3.format(",.f")(d) + " " + unit;
+            })
+
+
+            d3.select('#chart1 svg')
+                .datum(data)
+                .call(chart);
+            nv.utils.windowResize(chart.update);
+            return chart;
+        });
+    }
+
+    d3.csv("./data/agriculture.csv", function(error, data) {
+
+        populateSelection(data)
+        drawchart(find_years(data[0]))
+    })
+    </script>
+    <!-- <script type="text/javascript">
+        
+
+var svgString = new XMLSerializer().serializeToString(document.querySelector('svg'));
+console.log(svgString)
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var DOMURL = self.URL || self.webkitURL || self;
+var img = new Image();
+var svg = new Blob([svgString], {type: "image/svg+xml;charset=utf-8"});
+var url = DOMURL.createObjectURL(svg);
+console.log(url)
+img.onload = function() {
+    ctx.drawImage(img, 0, 0);
+    var jpg = canvas.toDataURL("image/jpg");
+    console.log(jpg)
+    document.querySelector('#png-container').innerHTML = '<img src="'+jpg+'"/>';
+    DOMURL.revokeObjectURL(jpg);
+};
+img.src = url;
+
+
+
+    </script>
+
+   <script type="text/javascript">
+window.onload = function() {
+
+    canvg(document.getElementById('chartsvg'))
+
+
+var canvas = document.getElementById("mycanvas");
+
+  //load a svg snippet in the canvas with id = 'drawingArea'
+  var img    = canvas.toDataURL("image/jpg");
+
+  //ignore mouse events and animation
+  document.write('<img src="'+img+'"/>');
+}
+</script>
+-->
+    <script>
+    d3.select('#saveButton').on('click', function() {
+        svg = d3.select("#chart1 svg")
+        console.log(svg[0][0].height, svg[0][0].width["baseVal"].value)
+        width = svg[0][0].width["baseVal"].value
+        height = svg[0][0].height["baseVal"].value
+        var svgString = getSVGString(svg.node());
+        svgString2Image(svgString, width, height, 'png', save); // passes Blob and filesize String to the callback
+
+        function save(dataBlob, filesize) {
+            saveAs(dataBlob, 'Visualization.png'); // FileSaver.js function
+        }
+    });
+
+
+    // Below are the function that handle actual exporting:
+    // getSVGString (svgNode ) and svgString2Image( svgString, width, height, format, callback )
+    function getSVGString(svgNode) {
+        svgNode.setAttribute('xlink', 'http://www.w3.org/1999/xlink');
+        var cssStyleText = getCSSStyles(svgNode);
+        appendCSS(cssStyleText, svgNode)
+
+        var serializer = new XMLSerializer();
+        var svgString = serializer.serializeToString(svgNode);
+        svgString = svgString.replace(/(\w+)?:?xlink=/g, 'xmlns:xlink=') // Fix root xlink without namespace
+        svgString = svgString.replace(/NS\d+:href/g, 'xlink:href') // Safari NS namespace fix
+
+        return svgString;
+
+        function getCSSStyles(parentElement) {
+            var selectorTextArr = [];
+
+            // Add Parent element Id and Classes to the list
+            selectorTextArr.push('#' + parentElement.id);
+            for (var c = 0; c < parentElement.classList.length; c++)
+                if (!contains('.' + parentElement.classList[c], selectorTextArr))
+                    selectorTextArr.push('.' + parentElement.classList[c]);
+
+                // Add Children element Ids and Classes to the list
+            var nodes = parentElement.getElementsByTagName("*");
+            for (var i = 0; i < nodes.length; i++) {
+                var id = nodes[i].id;
+                if (!contains('#' + id, selectorTextArr))
+                    selectorTextArr.push('#' + id);
+
+                var classes = nodes[i].classList;
+                for (var c = 0; c < classes.length; c++)
+                    if (!contains('.' + classes[c], selectorTextArr))
+                        selectorTextArr.push('.' + classes[c]);
+            }
+
+            // Extract CSS Rules
+            var extractedCSSText = "";
+            for (var i = 0; i < document.styleSheets.length; i++) {
+                var s = document.styleSheets[i];
+
+                try {
+                    if (!s.cssRules) continue;
+                } catch (e) {
+                    if (e.name !== 'SecurityError') throw e; // for Firefox
+                    continue;
+                }
+
+                var cssRules = s.cssRules;
+                for (var r = 0; r < cssRules.length; r++) {
+                    if (contains(cssRules[r].selectorText, selectorTextArr))
+                        extractedCSSText += cssRules[r].cssText;
+                }
+            }
+
+
+            return extractedCSSText
+
+            function contains(str, arr) {
+                return arr.indexOf(str) === -1 ? false : true;
+            }
+
+        }
+
+        function appendCSS(cssText, element) {
+            var styleElement = document.createElement("style");
+            styleElement.setAttribute("type", "text/css");
+            styleElement.innerHTML = cssText;
+            var refNode = element.hasChildNodes() ? element.children[0] : null;
+            element.insertBefore(styleElement, refNode);
+        }
+    }
+
+
+    function svgString2Image(svgString, width, height, format, callback) {
+        var format = format ? format : 'png';
+
+        var imgsrc = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgString))); // Convert SVG string to dataurl
+
+        var canvas = document.createElement("canvas");
+        var context = canvas.getContext("2d");
+
+        canvas.width = width;
+        canvas.height = height;
+
+        var image = new Image;
+        image.onload = function() {
+            context.clearRect(0, 0, width, height);
+            context.drawImage(image, 0, 0, width, height);
+
+            canvas.toBlob(function(blob) {
+                var filesize = Math.round(blob.length / 1024) + ' KB';
+                if (callback) callback(blob, filesize);
+            });
+
+
+        };
+
+        image.src = imgsrc;
+    }
+    </script>
+</body>
+
+</html>
