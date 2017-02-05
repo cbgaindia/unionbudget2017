@@ -180,9 +180,10 @@
             .defer(d3.csv, "data/disability.csv")
             .defer(d3.csv, "data/share_of_expenditure_by_moa.csv")
             .defer(d3.csv, "data/share_of_food_subsidy_allocation.csv")
+            .defer(d3.csv, "data/education/compo_mhrd.csv")
             .await(populateTableData);
 
-        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, food_security, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation) {
+        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, food_security, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd) {
             table_data["overview"] = overview;
             table_data["transfer_of_resources_to_states"] = transfer_of_resources_to_states;
             table_data["social_sector_allocations_and_priorities"] = social_sector_allocations_and_priorities;
@@ -208,7 +209,7 @@
             table_data["share_of_expenditure_by_moa"] = share_of_expenditure_by_moa;
             table_data["share_of_food_subsidy_allocation"] = share_of_food_subsidy_allocation;
 
-
+            table_data["compo_mhrd"] = compo_mhrd;
             setup_environment(table_data)
 
 
@@ -219,6 +220,27 @@
 
 
     }
+
+    var formatNumber = d3.format(".1f"),
+        formatCrore = function(x) {
+            return formatNumber(x / 1e7) + "Cr";
+        },
+        formatLakh = function(x) {
+            return formatNumber(x / 1e5) + "L";
+        },
+        formatThousand = function(x) {
+            return formatNumber(x / 1e3) + "k";
+        },
+        formatLowerDenom = function(x) {
+            return x;
+        };
+
+    function formatAbbr(x) {
+        var v = Math.abs(x);
+        return (v >= .9995e7 ? formatCrore : v >= .9995e5 ? formatLakh : v >= .999e3 ? formatThousand : formatLowerDenom)(x);
+    }
+
+
 
 
     loadDatasets();
@@ -233,6 +255,17 @@
             for (var i = 0; i < data.length; i++) {
                 if (data[i]["slug_name"] == indicator)
                     return data[i]
+            }
+
+            if (charttype == "barchart") {
+                indicator_data = filter_indicator(data)
+                draw_barchart(find_years(indicator_data));
+            } else if (charttype == "groupbarchart") {
+                draw_groupbarchart(data)
+            } else if (charttype == "linechart") {
+                indicator_data = filter_indicator(data)
+                draw_linechart(indicator_data);
+
             }
         }
 
@@ -258,33 +291,214 @@
             return [streamData];
         }
 
-
-        indicator_data = filter_indicator(data)
         if (charttype == "barchart") {
+            indicator_data = filter_indicator(data)
             draw_barchart(find_years(indicator_data));
+        } else if (charttype == "groupbarchart") {
+            draw_groupbarchart(data)
+        } else if (charttype == "linechart") {
+            indicator_data = filter_indicator(data)
+            draw_linechart(indicator_data);
         }
     }
 
+    function draw_linechart(data) {
+        function find_years(data) {
+            console.log(data)
+            obj_keys = Object.keys(data)
+
+            var streamData = {}
+            streamData["key"] = data.index_name
+            streamData["values"] = []
+            streamData["unit"] = data.unit
+
+            for (var j = 0; j < obj_keys.length; j++) {
+                if (parseInt(obj_keys[j][0]) == 2) {
+
+                    if (!isNaN(parseFloat(data[obj_keys[j]]))) {
+                        var temp = new Object();
+                        temp.label = parseInt(obj_keys[j].substring(0, 4));
+                        temp.tickvalue = obj_keys[j];
+                        console.log(obj_keys[j])
+                        temp.value = data[obj_keys[j]];
+                        streamData["values"].push(temp);
+                    }
+                }
+
+            }
+
+            return [streamData];
+        }
+        streamData = find_years(data)
+        nv.addGraph(function() {
+            var chart = nv.models.lineChart()
+                .margin({
+                    left: 100
+                })
+                .xTickFormat(function(d) {
+                    console.log(d)
+                    return d.tickvalue
+                }) //Adjust chart margins to give the x-axis some breathing room.
+                .x(function(d, i) {
+                    return i;
+                })
+                .y(function(d) {
+                    return parseFloat(d.value);
+                })
+                //We want nice looking tooltips and a guideline!
+                .showLegend(true) //Show the legend, allowing users to turn on/off line series.
+                .showYAxis(true) //Show the y-axis
+                .showXAxis(true) //Show the x-axis
+            ;
+
+            chart.yAxis.ticks(10)
+                .tickFormat(function(d) {
+                    return formatAbbr(d)
+                })
+                .axisLabel(streamData[0].unit)
+                .axisLabelDistance(0)
+                .tickPadding(5);
+
+            chart.y(function(d) {
+                return parseFloat(d.value)
+            })
+
+
+            //chart
+            console.log(streamData, streamData[0].values)
+            chart.xTickFormat(function(d) {
+                return streamData[0].values[d].tickvalue;
+            })
+
+            chart.tooltip.valueFormatter(function(d) {
+                    console.log(d)
+                    return d
+                })
+                .headerFormatter(function(d, i) {
+                    console.log(d, i)
+                    return "";
+                })
+
+            //console.log(data)
+
+
+            /* Done setting the chart up? Time to render it!*/
+
+
+            /*chart.tooltip.valueFormatter(function(d) {
+                return d3.format(",.f")(d) + " " + data[0].unit;
+            })*/
+
+
+
+            d3.select('#chart1 svg') //Select the <svg> element you want to render the chart in.   
+                .datum(streamData) //Populate the <svg> element with chart data...
+                .call(chart); //Finally, render the chart!
+
+            //Update the chart when window resizes.
+            nv.utils.windowResize(function() {
+                chart.update()
+            });
+            return chart;
+        });
+
+    }
+
+    function draw_groupbarchart(data) {
+
+        function generateStreamData(data) {
+            series = []
+            console.log(data)
+            for (stream in data) {
+                console.log(data[stream])
+                obj_keys = Object.keys(data[stream])
+
+                var stream_inst = {}
+                stream_inst["key"] = data[stream].index_name
+                stream_inst["values"] = []
+                stream_inst["unit"] = data[stream].unit
+                stream_inst["color"] = data[stream].color
+
+                for (var j = 0; j < obj_keys.length; j++) {
+                    if (parseInt(obj_keys[j][0]) == 2) {
+
+                        console.log(obj_keys, obj_keys[j])
+                        if (!isNaN(parseFloat(data[stream][obj_keys[j]]))) {
+                            var temp = new Object();
+                            temp.label = obj_keys[j];
+                            temp.value = parseFloat(data[stream][obj_keys[j]]);
+                            stream_inst["values"].push(temp);
+                        }
+                    }
+
+                }
+
+                series.push(stream_inst)
+
+
+
+
+            }
+            return series
+
+        }
+
+
+        nv.addGraph(function() {
+
+            streamData = generateStreamData(data)
+            console.log(streamData)
+            var chart = nv.models.multiBarChart()
+                .x(function(d) {
+                    return d.label
+                })
+                .y(function(d) {
+                    return d.value
+                })
+                .margin({
+                    top: 30,
+                    right: 20,
+                    bottom: 30,
+                    left: 70
+                }).color(function(d, i) {
+                    console.log(d)
+                    return d.color;
+                })
+                //Show bar value next to each bar.
+                .showControls(true); //Allow user to switch between "Grouped" and "Stacked" mode.
+
+
+            chart.yAxis.ticks(10)
+                .tickFormat(function(d) {
+                    return formatAbbr(d)
+                })
+                .axisLabel(data[0].unit)
+                .axisLabelDistance(0)
+                .tickPadding(5);
+
+            chart.y(function(d) {
+                return parseFloat(d.value)
+            })
+
+            chart.tooltip.valueFormatter(function(d) {
+                return d3.format(",.f")(d) + " " + data[0].unit;
+            })
+
+            d3.select('#chart1 svg')
+                .datum(streamData)
+                .call(chart);
+
+            nv.utils.windowResize(chart.update);
+
+            return chart;
+        });
+    }
+
+
+
     function draw_barchart(data) {
 
-        var formatNumber = d3.format(".1f"),
-            formatCrore = function(x) {
-                return formatNumber(x / 1e7) + "Cr";
-            },
-            formatLakh = function(x) {
-                return formatNumber(x / 1e5) + "L";
-            },
-            formatThousand = function(x) {
-                return formatNumber(x / 1e3) + "k";
-            },
-            formatLowerDenom = function(x) {
-                return x;
-            };
 
-        function formatAbbr(x) {
-            var v = Math.abs(x);
-            return (v >= .9995e7 ? formatCrore : v >= .9995e5 ? formatLakh : v >= .999e3 ? formatThousand : formatLowerDenom)(x);
-        }
 
         //d3.select("#indicator-name").text(data[0].key)
 
