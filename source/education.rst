@@ -20,7 +20,7 @@ Composition of MHRD Budget by Departments
 
 .. raw:: html
 
-    <iframe src="viz/visualization.html#barchart/education/dept_of_school_education_and_literacy" width="100%", height="500",  frameBorder="0"></iframe>
+    <iframe src="viz/visualization.html#groupbarchart/compo_mhrd" width="100%", height="500",  frameBorder="0"></iframe>
 
     <iframe src="viz/visualization.html#barchart/education/dept_of_higher_education" width="100%", height="500",  frameBorder="0"></iframe>
 
