@@ -125,6 +125,18 @@
         background: #40627C;
         color: #fff;
     }
+
+    .nv-point {
+        stroke-opacity: 1!important;
+        stroke-width: 4px!important;
+        fill-opacity: 0!important;
+    }
+    
+    .nv-point.hover {
+        stroke-width: 12px!important;
+        fill-opacity: .95 !important;
+        stroke-opacity: .95 !important;
+    }
     
     @media(max-width: 480px) {
         .nvd3 .nv-discretebar .nv-groups text {
@@ -335,6 +347,12 @@
                 .margin({
                     left: 100
                 })
+                .margin({
+                    top: 90,
+                    right: 60,
+                    bottom: 30,
+                    left: 70
+                })
                 .xTickFormat(function(d) {
                     console.log(d)
                     return d.tickvalue
@@ -351,6 +369,9 @@
                 .showXAxis(true) //Show the x-axis
             ;
 
+           /* chart.pointShape("circle")
+            chart.pointSize(1.5)
+*/
             chart.yAxis.ticks(10)
                 .tickFormat(function(d) {
                     return formatAbbr(d)
