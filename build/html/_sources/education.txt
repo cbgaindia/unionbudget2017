@@ -76,7 +76,7 @@ Though, the budgetary provision for the sector has shown a 10 percent increase i
 
 .. raw:: html
 
-    <iframe src="viz/visualization.html#barchart/education/mid_day_meal_(mdm)" width="100%", height="500",  frameBorder="0"></iframe>
+    <iframe src="viz/visualization.html#linechart/education/mid_day_meal_(mdm)" width="100%", height="500",  frameBorder="0"></iframe>
 
 .. raw:: html
 
@@ -84,4 +84,4 @@ Though, the budgetary provision for the sector has shown a 10 percent increase i
 
 .. raw:: html
 
-    <iframe src="viz/visualization.html#barchart/education/financing_ssa_through_cess_as_%_of_total_ssa_financing" width="100%", height="500",  frameBorder="0"></iframe>
+    <iframe src="viz/visualization.html#linechart/education/financing_ssa_through_cess_as_%_of_total_ssa_financing" width="100%", height="500",  frameBorder="0"></iframe>
