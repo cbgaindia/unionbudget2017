@@ -349,7 +349,7 @@
                 })
                 .margin({
                     top: 90,
-                    right: 60,
+                    right: 50,
                     bottom: 30,
                     left: 70
                 })
@@ -371,7 +371,7 @@
 
            /* chart.pointShape("circle")
             chart.pointSize(1.5)
-*/
+*/     
             chart.yAxis.ticks(10)
                 .tickFormat(function(d) {
                     return formatAbbr(d)
@@ -451,17 +451,10 @@
                             stream_inst["values"].push(temp);
                         }
                     }
-
                 }
-
                 series.push(stream_inst)
-
-
-
-
             }
             return series
-
         }
 
 
@@ -488,6 +481,10 @@
                 //Show bar value next to each bar.
                 .showControls(true); //Allow user to switch between "Grouped" and "Stacked" mode.
 
+
+             if (screen.width < 480) {
+                chart.height(250)
+            } 
 
             chart.yAxis.ticks(10)
                 .tickFormat(function(d) {
@@ -518,11 +515,7 @@
 
 
     function draw_barchart(data) {
-
-
-
         //d3.select("#indicator-name").text(data[0].key)
-
         d3.select('#chart1 svg')
             .append("text")
             .attr("class", "header")
@@ -544,14 +537,12 @@
 
             var unit = data[0].unit;
 
-
             chart.margin({
                 "left": 70,
                 "right": 10,
                 "top": 50,
                 "bottom": 60
             })
-
 
             chart.yAxis.ticks(10)
                 .tickFormat(function(d) {
@@ -568,7 +559,6 @@
             if (screen.width < 480) {
                 chart.xAxis
                     .axisLabelDistance(40)
-
                 chart.rotateLabels(-40)
             } else {
                 chart.xAxis
