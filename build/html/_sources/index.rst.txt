@@ -16,7 +16,7 @@ Contents:
    transfer_of_resources_to_states
    social_sector_allocations_and_priorities
    taxation
-   education
+   education/index
    health
    drinking_water_and_sanitation
    rural_development
