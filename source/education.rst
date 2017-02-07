@@ -60,5 +60,5 @@ Though, the budgetary provision for the sector has shown a 10 percent increase i
 
 .. raw:: html
 
-    <iframe src="http://192.168.0.102:8000/Documents/Lab/CBGA%20-%20Visualisation%20Designs/unionbudget2017/build/html/viz/visualization.html#linechart/education/mid_day_meal_(mdm)" width="100%", height="500",  frameBorder="0"></iframe>
+    <iframe src="http://localhost:8000/Documents/Lab/CBGA%20-%20Visualisation%20Designs/unionbudget2017/build/html/viz/visualization.html#linechart/education/mid_day_meal_(mdm)" width="100%", height="500",  frameBorder="0"></iframe>
 

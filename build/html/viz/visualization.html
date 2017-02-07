@@ -24,6 +24,8 @@
         background: white;
         height: 100%;
         width: 100%;
+    }
+    svg{    
         max-height: 450px;
     }
     
@@ -147,7 +149,7 @@
 </head>
 
 <body>
-    <button type="button" class="btn btn-default" id='saveButton'>Download Visualization as Image</button>
+    <button type="button" class="btn btn-default" id='saveButton'>Download</button>
     <div id="chart1">
         <svg id="chartsvg"></svg>
     </div>
@@ -193,9 +195,17 @@
             .defer(d3.csv, "data/share_of_expenditure_by_moa.csv")
             .defer(d3.csv, "data/share_of_food_subsidy_allocation.csv")
             .defer(d3.csv, "data/education/compo_mhrd.csv")
+
+            .defer(d3.csv, "data/energy/compo_energy.csv")
+            .defer(d3.csv, "data/energy/compo_prog_mnre.csv")
+
+            .defer(d3.csv, "data/children/compo_child_spending.csv")
+            .defer(d3.csv, "data/children/compo_children_sector_budget.csv")
+
+             .defer(d3.csv, "data/dalit/compo_outlays_adivasis.csv")
             .await(populateTableData);
 
-        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, food_security, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd) {
+        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, food_security, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, compo_child_spending, compo_children_sector_budget, compo_outlays_adivasis) {
             table_data["overview"] = overview;
             table_data["transfer_of_resources_to_states"] = transfer_of_resources_to_states;
             table_data["social_sector_allocations_and_priorities"] = social_sector_allocations_and_priorities;
@@ -222,6 +232,14 @@
             table_data["share_of_food_subsidy_allocation"] = share_of_food_subsidy_allocation;
 
             table_data["compo_mhrd"] = compo_mhrd;
+
+            table_data["compo_energy"] = compo_energy;
+            table_data["compo_prog_mnre"] = compo_prog_mnre;
+
+            table_data["compo_child_spending"] = compo_child_spending
+            table_data["compo_children_sector_budget"] = compo_children_sector_budget
+
+            table_data["compo_outlays_adivasis"] = compo_outlays_adivasis
             setup_environment(table_data)
 
 
@@ -343,14 +361,30 @@
         }
         streamData = find_years(data)
         nv.addGraph(function() {
+
+            d3.select('#chart1 svg')
+            .append("text")
+            .attr("class", "header")
+            .attr("x", 50)
+            .attr("y", 20)
+            .text(streamData[0].key);
+
+        d3.select('#chart1 svg')
+            .append("text")
+            .attr("class", "header")
+            .attr("x", 10)
+            .attr("y", 430)
+            .text("Source -  Compiled by CBGA from Union Budget, Expenditure Budget, Volume II, for various years");
+
+
             var chart = nv.models.lineChart()
                 .margin({
                     left: 100
                 })
                 .margin({
-                    top: 90,
+                    top: 60,
                     right: 50,
-                    bottom: 30,
+                    bottom: 90,
                     left: 70
                 })
                 .xTickFormat(function(d) {
@@ -369,6 +403,7 @@
                 .showXAxis(true) //Show the x-axis
             ;
 
+            chart.showLegend(false)
            /* chart.pointShape("circle")
             chart.pointSize(1.5)
 */     
@@ -460,6 +495,13 @@
 
         nv.addGraph(function() {
 
+            d3.select('#chart1 svg')
+            .append("text")
+            .attr("class", "header")
+            .attr("x", 10)
+            .attr("y", 480)
+            .text("Source -  Compiled by CBGA from Union Budget, Expenditure Budget, Volume II, for various years");
+
             streamData = generateStreamData(data)
             console.log(streamData)
             var chart = nv.models.multiBarChart()
@@ -470,9 +512,9 @@
                     return d.value
                 })
                 .margin({
-                    top: 30,
+                    top: 60,
                     right: 20,
-                    bottom: 30,
+                    bottom: 60,
                     left: 70
                 }).color(function(d, i) {
                     console.log(d)
@@ -485,7 +527,7 @@
              if (screen.width < 480) {
                 chart.height(250)
             } 
-
+            chart.groupSpacing(0.3)
             chart.yAxis.ticks(10)
                 .tickFormat(function(d) {
                     return formatAbbr(d)
@@ -523,6 +565,13 @@
             .attr("y", 20)
             .text(data[0].key);
 
+        d3.select('#chart1 svg')
+            .append("text")
+            .attr("class", "header")
+            .attr("x", 10)
+            .attr("y", 480)
+            .text("Source -  Compiled by CBGA from Union Budget, Expenditure Budget, Volume II, for various years");
+
         nv.addGraph(function() {
 
             var chart = nv.models.discreteBarChart()
@@ -541,7 +590,7 @@
                 "left": 70,
                 "right": 10,
                 "top": 50,
-                "bottom": 60
+                "bottom": 110
             })
 
             chart.yAxis.ticks(10)
@@ -554,12 +603,13 @@
 
             chart.xAxis.ticks(10)
                 .axisLabel("Years")
-                .tickPadding(15)
+                .tickPadding(5)
 
             if (screen.width < 480) {
                 chart.xAxis
-                    .axisLabelDistance(40)
+                    .axisLabelDistance(30)
                 chart.rotateLabels(-40)
+             
             } else {
                 chart.xAxis
                     .axisLabelDistance(10)
