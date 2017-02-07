@@ -52,12 +52,12 @@ Health
 
 .. raw:: html
 
-	<iframe src="https://cbgaindia.github.io/unionbudget2017/viz/visualization.html#barchart/health/total_mohfw_as_percent_of_gdp_(excl._ayush)" width="100%", height="500",  frameBorder="0"></iframe>
+	<iframe src="https://cbgaindia.github.io/unionbudget2017/viz/visualization.html#linechart/health/total_mohfw_as_percent_of_gdp_(excl._ayush)" width="100%", height="500",  frameBorder="0"></iframe>
 
 .. raw:: html
 
-	<iframe src="https://cbgaindia.github.io/unionbudget2017/viz/visualization.html#barchart/health/total_nhm_as_percent_of_mohfw_(incl._ayush)" width="100%", height="500",  frameBorder="0"></iframe>
+	<iframe src="https://cbgaindia.github.io/unionbudget2017/viz/visualization.html#linechart/health/total_nhm_as_percent_of_mohfw_(incl._ayush)" width="100%", height="500",  frameBorder="0"></iframe>
 
 .. raw:: html
 
-	<iframe src="https://cbgaindia.github.io/unionbudget2017/viz/visualization.html#barchart/health/total_mohfw_as_percent_of_gdp_(incl._ayush)" width="100%", height="500",  frameBorder="0"></iframe>
+	<iframe src="https://cbgaindia.github.io/unionbudget2017/viz/visualization.html#linechart/health/total_mohfw_as_percent_of_gdp_(incl._ayush)" width="100%", height="500",  frameBorder="0"></iframe>
