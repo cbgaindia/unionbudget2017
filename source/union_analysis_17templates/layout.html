@@ -1,6 +1,6 @@
 {% extends "!layout.html" %}
 {% block sidebartitle %}
-    <a href="{{ pathto(master_doc) }}"><img src='_static/logo.png'/></a>
+    <a href="{{ pathto(master_doc) }}"><img src='{{ pathto('_static/' + logo, 1) }}/logo.png'/></a>
     {% if logo and theme_logo_only %}
         <a class="project-title" href="{{ pathto(master_doc) }}">
     {% else %}

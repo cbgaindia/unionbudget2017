@@ -151,6 +151,11 @@ html_theme_path = ["_themes", "_static"]
 html_style_path = ["_static",]
 
 html_style = "css/custom.css" 
+
+html_theme_options = {
+        "collapse_navigation" : False
+}
+
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
