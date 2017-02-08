@@ -30,7 +30,6 @@ import sphinx_rtd_theme
 # ones.
 
 html_theme = "sphinx_rtd_theme"
-
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 
@@ -55,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Union Budget Analysis 2017'
-copyright = u'2017, CBGA'
+copyright = u'2017, Centre for Budget and Governance Accountability(CBGA), India'
 author = u'CBGA'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -153,7 +152,8 @@ html_style_path = ["_static",]
 html_style = "css/custom.css" 
 
 html_theme_options = {
-        "collapse_navigation" : False
+        "collapse_navigation" : False,
+        "navigation_depth": 4,
 }
 
 # Add any extra paths that contain custom files (such as robots.txt or
