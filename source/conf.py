@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Union Budget Analysis 2017 documentation build configuration file, created by
+# Union Budget Analysis Tool 2017 documentation build configuration file, created by
 # sphinx-quickstart on Fri Feb  3 17:21:51 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -53,7 +53,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Union Budget Analysis 2017'
+project = u'Union Budget Analysis Tool 2017-18'
 copyright = u'2017, Centre for Budget and Governance Accountability(CBGA), India'
 author = u'CBGA'
 
@@ -239,7 +239,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'UnionBudgetAnalysis2017.tex', u'Union Budget Analysis 2017 Documentation',
+    (master_doc, 'UnionBudgetAnalysis2017.tex', u'Union Budget Analysis Tool 2017-18',
      u'CBGA', 'manual'),
 ]
 
@@ -269,7 +269,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'unionbudgetanalysis2017', u'Union Budget Analysis 2017 Documentation',
+    (master_doc, 'unionbudgetanalysis2017', u'Union Budget Analysis Tool 2017-18',
      [author], 1)
 ]
 
@@ -283,7 +283,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'UnionBudgetAnalysis2017', u'Union Budget Analysis 2017 Documentation',
+    (master_doc, 'UnionBudgetAnalysis2017', u'Union Budget Analysis Tool 2017-18',
      author, 'UnionBudgetAnalysis2017', 'One line description of project.',
      'Miscellaneous'),
 ]
