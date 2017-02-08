@@ -2,6 +2,12 @@
 
 .wy-nav-side{
     background: #E9EAE5;
+    width: 310px;
+}
+
+.wy-side-scroll{
+    overflow-y: scroll;
+    width: 310px;
 }
 
 .wy-menu-vertical a {

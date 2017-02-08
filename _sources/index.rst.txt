@@ -17,7 +17,7 @@ Contents:
    social_sector_allocations_and_priorities
    taxation
    education/index
-   health
+   health/index
    drinking_water_and_sanitation
    rural_development
    agriculture
