@@ -1,18 +1,22 @@
-slug_name,index_name,unit,2012-13,2013-14,2014-15 ,2015-16(RE),2016-17(BE),notes,insights
-integrated_child_development_services_scheme_(icds),Integrated Child Development Services Scheme (ICDS),Rs crore,15767.2,16400.8,16683.6,15584.2,14862.9,"From 2016-17 core ICDS, National Nutrition Mission (NNM), IGMSY, SABLA and RGNCSCWM have been clubbed together as 'Umbrella ICDS.' The allocations for NNM are included in ICDS budget.",
-mid-day_meal_(mdm),Mid-day Meal (MDM),Rs crore,10761.4,10917.6,10523.5,9236.4,9700.0,"From 2016-17 core ICDS, National Nutrition Mission (NNM), IGMSY, SABLA and RGNCSCWM have been clubbed together as 'Umbrella ICDS.' The allocations for NNM are included in ICDS budget.",
-scheme_for_empowerment_of_adolescent_girls_(sabla),Scheme for Empowerment of Adolescent Girls (SABLA),Rs crore,503.6,603.0,622.4,475.5,460.0,"From 2016-17 core ICDS, National Nutrition Mission (NNM), IGMSY, SABLA and RGNCSCWM have been clubbed together as 'Umbrella ICDS.' The allocations for NNM are included in ICDS budget.",
-indira_gandhi_matritva_sahayog_yojana_(igmsy),Indira Gandhi Matritva Sahayog Yojana (IGMSY),Rs crore,82.1,231.9,343.1,233.5,400.0,"From 2016-17 core ICDS, National Nutrition Mission (NNM), IGMSY, SABLA and RGNCSCWM have been clubbed together as 'Umbrella ICDS.' The allocations for NNM are included in ICDS budget.",
-national_creche_scheme_for_children_of_working_mothers_(rgncscwm)_,National Creche Scheme for Children of Working Mothers (RGNCSCWM) ,Rs crore,106.0,100.0,97.7,132.0,150.0,"From 2016-17 core ICDS, National Nutrition Mission (NNM), IGMSY, SABLA and RGNCSCWM have been clubbed together as 'Umbrella ICDS.' The allocations for NNM are included in ICDS budget.",
-total_nutrition-specific_schemes,Total Nutrition-Specific Schemes,Rs crore,27220.3,28253.3,28270.4,25661.6,25572.9,"From 2016-17 core ICDS, National Nutrition Mission (NNM), IGMSY, SABLA and RGNCSCWM have been clubbed together as 'Umbrella ICDS.' The allocations for NNM are included in ICDS budget.",
-national_health_mission_(nhm),National Health Mission (NHM),Rs crore,18046.7,18633.8,19751.5,19122.0,19037.0,,
-national_rural_drinking_water_programme_(nrdwp),National Rural Drinking Water Programme (NRDWP),Rs crore,10489.9,9691.3,9242.8,4373.0,5000.0,,
-swachh_bharat_mission_(sbm)_(rural_+_urban),Swachh Bharat Mission (SBM) (Rural + Urban),Rs crore,2473.5,2243.5,3700.5,7525.0,11300.0,,
-mahatma_gandhi_national_rural_employment_guarantee_act_(mgnrega),Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA),Rs crore,30273.0,32994.1,32976.7,36967.0,38500.0,,
-national_rural_livelihood_mission_(nrlm),National Rural Livelihood Mission (NRLM),Rs crore,2195.4,2022.1,1413.2,2672.0,3000.0,,
-food_subsidy,Food Subsidy,Rs crore,85000.0,92000.0,117671.2,139419.0,134834.6,,
-national_food_security_mission_(nfsm),National Food Security Mission (NFSM),Rs crore,1722.9,2027.0,1872.7,1136.6,1705.9,,
-national_mission_for_sustainable_agriculture_(nmsa),National Mission for Sustainable Agriculture (NMSA),Rs crore,0.0,0.0,1268.4,203.2,1101.0,,
-national_mission_for_oilseeds_and_oilpalm_(nmoop),National Mission for Oilseeds and Oilpalm (NMOOP),Rs crore,398.5,0.0,316.3,269.0,502.7,,
-total_nutrition-sensitive_schemes,Total Nutrition-Sensitive Schemes,Rs crore,150599.9,159611.9,188213.3,211686.9,214981.2,,
-total_nutrition,Total Nutrition,Rs crore,177820.2,187865.1,216483.6,237348.4,240554.1,,
+slug_name,index_name,2012-13,2013-14,2014-15,2015-16,2016-17 BE,2016-17 RE,2017-18 BE,color,unit
+core_icds_anganwadi_services,Core ICDS/ Anganwadi services,15767.2,16400.8,16683.6,15489.3,14850,14735.6,16745.2,#FF9800,Rs. Crore
+national_creche_scheme,National Creche Scheme,106,100,97.7,133,150,150,200,#FF9801,Rs. Crore
+igmsy_mbp,IGMSY/MBP,82.1,231.9,343.1,233.4,400,634,2700,#FF9802,Rs. Crore
+sabla,SABLA,503.6,603,622.4,475.2,460,460,460,#FF9803,Rs. Crore
+food_subsidy,Food subsidy,85000,92000,117671.2,139419,134834.6,135173,145338.6,#FF9804,Rs. Crore
+nrhm_+_nuhm,NRHM + NUHM,18046.7,18633.8,19751.5,18971.5,19037,20037,21940.7,#FF9805,Rs. Crore
+mid-day_meal_(mdm),Mid-day Meal (MDM),10761.4,10917.6,10523.5,9144.89,9700,9700,10000,#FF9806,Rs. Crore
+rmsa,RMSA,3172,2679,3398,3562.61,3700,3700,3830,#FF9807,Rs. Crore
+nrdwp,NRDWP,10489.9,9691.3,9242.8,4369.6,5000,6000,6050,#FF9808,Rs. Crore
+sbm_(rural_+_urban),SBM (Rural + Urban),2473.5,2243.5,3700.5,7469.2,11300,12800,16248.3,#FF9809,Rs. Crore
+mgnrega,MGNREGA,30273,32994.1,32976.7,37340.7,38500,47499,48000,#FF9810,Rs. Crore
+nlm_(nrlm_+_nulm),NLM (NRLM + NULM),2195.4,2022.1,2116.3,2783.1,3325,3334,4849,#FF9811,Rs. Crore
+nsap,NSAP,7825,9406,7083.7,8616.4,9500,9500,9500,#FF9812,Rs. Crore
+nfsm,NFSM,1722.9,2027,1872.7,1162.3,1700,1280,1720,#FF9813,Rs. Crore
+nmsa,NMSA,0,0,1268.4,685.9,1062.5,880,1226,#FF9814,Rs. Crore
+nmoop,NMOOP,398.5,555.8,316.3,305.8,502.7,376,403,#FF9815,Rs. Crore
+rkvy,RKVY,8400,7052.5,8443.2,3940,5400,3550,4750,#FF9816,Rs. Crore
+white_revolution,White Revolution,1434.71,1449,999.5,937.1,1138,1311.8,1634,#FF9817,Rs. Crore
+blue_revolution,Blue Revolution,329.81,347.5,388,200,246.8,392.3,400.7,#FF9818,Rs. Crore
+national_horticulture_mission$,National Horticulture Mission$,1089.3,1809.3,1954.7,1696.5,1620,1660,2320,#FF9819,Rs. Crore
+total_nutrition,Total Nutrition,200071,211164,239454,256936,262427,273173,298315,#FF9820,Rs. Crore
