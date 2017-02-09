@@ -1,5 +1,6 @@
-slug_name,index_name,2015-2016,2016-2017 (BE),2016-2017 (RE),2017-2018 (BE),color,unit
-disinvestment_receipts,Disinvestment Receipts,42131.69,"36,000","40,000","46,500",#84C443,Rs. Crore
-strategic_disinvestment,Strategic Disinvestment,...,"20,500","5,500","15,000",#84C443,Rs. Crore
-others_(listing_of_insurance_companies),Others (Listing of Insurance Companies),...,...,...,"11,000",#84C443,Rs. Crore
-total,Total,42131.69,56500,45500,72500,#84C443,Rs. Crore
+slug_name,index_name,2011-12,2012-13,2013-14 ,2014-15,2015-16,2016-17 (BE),2016-17 (RE),2016-17(PR),2017-18 (BE),color,unit
+disinvestment_receipts,Disinvestment Receipts,...,...,...,...,42131.69,36000,40000,...,46500,#84C443,Rs. Crore
+strategic_disinvestment,Strategic Disinvestment,...,...,...,...,...,20500,5500,...,15000,#84C443,Rs. Crore
+others_(listing_of_insurance_companies),Others (Listing of Insurance Companies),...,...,...,...,...,...,...,...,11000,#84C443,Rs. Crore
+total,Total,...,...,...,...,42131.69,56500,45500,...,72500,#84C443,Rs. Crore
+revenue_foregone_gdp_ratio,Revenue Foregone - GDP ratio,6.1,5.7,4.9,4.5,2.1,...,...,2.1,...,#84C444,Ratio
