@@ -197,8 +197,8 @@
 
             .defer(d3.csv, "data/energy/compo_energy.csv")
             .defer(d3.csv, "data/energy/compo_prog_mnre.csv")
-
-            .defer(d3.csv, "data/children/compo_child_spending.csv")
+            
+            .defer(d3.csv, "data/children.csv")
             .defer(d3.csv, "data/children/compo_children_sector_budget.csv")
 
              .defer(d3.csv, "data/dalit/compo_outlays_adivasis.csv")
@@ -209,7 +209,7 @@
              .defer(d3.csv, "data/compo_misc_capital_recipts.csv")
             .await(populateTableData);
 
-        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, food_security, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, compo_child_spending, compo_children_sector_budget, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts) {
+        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, food_security, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, children, compo_children_sector_budget, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts) {
             table_data["overview"] = overview;
             table_data["transfer_of_resources_to_states"] = transfer_of_resources_to_states;
             table_data["social_sector_allocations_and_priorities"] = social_sector_allocations_and_priorities;
@@ -240,7 +240,7 @@
             table_data["compo_energy"] = compo_energy;
             table_data["compo_prog_mnre"] = compo_prog_mnre;
 
-            table_data["compo_child_spending"] = compo_child_spending
+            table_data["children"] = children
             table_data["compo_children_sector_budget"] = compo_children_sector_budget
 
             table_data["compo_outlays_adivasis"] = compo_outlays_adivasis
