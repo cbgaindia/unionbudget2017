@@ -37,7 +37,7 @@ Contents
    nutrition
    climate_change
    women
-   children
+   children/index
    dalits
    religious_minorities
    social_security
