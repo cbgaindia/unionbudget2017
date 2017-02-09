@@ -74,9 +74,9 @@
     
     .btn {
         display: inline-block;
-        padding: 6px 12px;
+        padding: 2px 4px;
         margin-bottom: 0;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 400;
         line-height: 1.42857143;
         text-align: center;
@@ -130,12 +130,12 @@
 
     .nv-point {
         stroke-opacity: 1!important;
-        stroke-width: 4px!important;
+        stroke-width: 5px!important;
         fill-opacity: 0!important;
     }
     
     .nv-point.hover {
-        stroke-width: 12px!important;
+        stroke-width: 15px!important;
         fill-opacity: .95 !important;
         stroke-opacity: .95 !important;
     }
@@ -163,7 +163,6 @@
     dataset = query_parameters[1]
     indicator = query_parameters[2]
 
-    console.log(charttype, dataset, indicator)
         // end document ready function
 
     function loadDatasets() {
@@ -387,6 +386,7 @@
             .attr("class", "header")
             .attr("x", 10)
             .attr("y", 430)
+            .style("font-size", "11px")
             .text("Source:  Compiled by CBGA team from Union Budget for various years");
 
 
@@ -414,37 +414,36 @@
                 .showLegend(true) //Show the legend, allowing users to turn on/off line series.
                 .showYAxis(true) //Show the y-axis
                 .showXAxis(true) //Show the x-axis
+                .padData(true)
+                .padDataOuter(-0.5)
+                .clipEdge(false)
+                .clipVoronoi(false)
                 .color([streamData[0].color]);
 
             chart.showLegend(false)
            /* chart.pointShape("circle")
-            chart.pointSize(1.5)
+            chart.pointSize(2)
 */     
             chart.yAxis.ticks(10)
                 .tickFormat(function(d) {
                     return formatAbbr(d)
                 })
                 .axisLabel(streamData[0].unit)
-                .axisLabelDistance(0)
                 .tickPadding(5);
 
             chart.y(function(d) {
                 return parseFloat(d.value)
-            })
-
-
-        
+            }) 
       
             chart.xTickFormat(function(d) {
                 return streamData[0].values[d].tickvalue;
             })
+            chart.xAxis.tickPadding(20);
 
             chart.tooltip.valueFormatter(function(d) {
-                console.log(d);
                     return d
                 })
                 .headerFormatter(function(d, i) {
-                console.log(d);
                     return "";
                 })
 
@@ -456,7 +455,7 @@
 
          
             nv.utils.windowResize(function() {
-                chart.update()
+                /*chart.update()*/
             });
             return chart;
         });
@@ -502,7 +501,7 @@
             .append("text")
             .attr("class", "header")
             .attr("x", 10)
-            .attr("y", 480)
+            .attr("y", 500)
             .text("Source -  Compiled by CBGA from Union Budget, Expenditure Budget, Volume II, for various years");
 
             streamData = generateStreamData(data)
@@ -523,12 +522,16 @@
         
                     return d.color;
                 })
+                .reduceXTicks(false) 
                 //Show bar value next to each bar.
                 .showControls(true); //Allow user to switch between "Grouped" and "Stacked" mode.
-
+            
+            chart.legend.align(false) 
+            chart.legend.margin({top: 0, right:30, left:0, bottom: 0});   
 
              if (screen.width < 480) {
                 chart.height(250)
+                chart.rotateLabels(-40)
             } 
             chart.groupSpacing(0.3)
             chart.yAxis.ticks(10)
@@ -550,6 +553,14 @@
             d3.select('#chart1 svg')
                 .datum(streamData)
                 .call(chart);
+
+            d3.select('#chart1 svg')
+                .append("text")
+                .attr("class", "header")
+                .attr("x", 10)
+                .attr("y", 440)
+                .style("font-size", "11px")
+                .text("Source: Compiled by CBGA from Union Budget for various years");
 
             nv.utils.windowResize(chart.update);
 
@@ -574,6 +585,7 @@
             .attr("class", "header")
             .attr("x", 10)
             .attr("y", 430)
+            .style("font-size", "11px")
             .text("Source: Compiled by CBGA from Union Budget for various years");
 
         nv.addGraph(function() {
