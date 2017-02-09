@@ -32,7 +32,7 @@ Contents
    health/index
    drinking_water_and_sanitation/index
    rural_development
-   agriculture
+   agriculture/index
    food_security
    nutrition
    climate_change
