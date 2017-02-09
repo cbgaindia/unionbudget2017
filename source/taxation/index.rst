@@ -11,3 +11,4 @@ Contents:
     disinvestment_receipts
     strategic_disinvestment
     total_union_govt_miscellaneous_capital_receipts
+    revenue_foregone
