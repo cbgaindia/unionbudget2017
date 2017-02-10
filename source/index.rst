@@ -36,7 +36,7 @@ Contents
    food_security
    nutrition
    climate_change
-   women
+   women/index
    children/index
    dalits
    religious_minorities
