@@ -6,7 +6,8 @@ Contents:
 .. toctree::
 	:maxdepth: 2
 
-	total_allocations_to_ministry_of_women_and_child_development
+	highlights
+        total_allocations_to_ministry_of_women_and_child_development
 	allocations_to_ministry_of_women_and_child_development_as_a_proportion_of_union_budget
 	core_icds_anganwadi_services
 	maternity_benefit_programme_indira_gandhi_matritva_sahyog_yojana
