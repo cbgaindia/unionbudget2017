@@ -495,6 +495,7 @@
         }
 
 
+
         nv.addGraph(function() {
 
             d3.select('#chart1 svg')
@@ -526,6 +527,17 @@
                 //Show bar value next to each bar.
                 .showControls(true); //Allow user to switch between "Grouped" and "Stacked" mode.
             
+            if( indicator == "nostack")
+            {
+                chart.stacked(false)
+                chart.showControls(false)
+
+            }
+            if (indicator == "stack")
+            {
+                chart.stacked(true)
+                .showControls(false)
+            }
             chart.legend.align(false) 
             chart.legend.margin({top: 0, right:30, left:0, bottom: 0});   
 
