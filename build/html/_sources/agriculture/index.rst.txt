@@ -6,6 +6,7 @@ Contents:
 .. toctree::
     :maxdepth: 2
 
+    highlights
     department_of_agriculture_cooperation_and_farmers_welfare
     department_of_animal_husbandry_dairying_and_fisheries
     department_of_agricultural_research_and_education

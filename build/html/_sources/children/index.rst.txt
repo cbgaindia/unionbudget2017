@@ -6,7 +6,8 @@ Contents:
 .. toctree::
 	:maxdepth: 2
 
-	total_child_budget
+        highlights
+        total_child_budget
         sector_wise_composition_of_total_child_budget  
         child_budget_as_percentage_of_total_union_budget
 	child_budget_as_percentage_of_gdp
