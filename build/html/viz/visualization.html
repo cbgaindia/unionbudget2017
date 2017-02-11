@@ -139,7 +139,7 @@
         fill-opacity: .95 !important;
         stroke-opacity: .95 !important;
     }
-    
+ 
     @media(max-width: 480px) {
         .nvd3 .nv-discretebar .nv-groups text {
             display: none;
@@ -201,15 +201,16 @@
             .defer(d3.csv, "data/children.csv")
             .defer(d3.csv, "data/children/compo_children_sector_budget.csv")
 
-             .defer(d3.csv, "data/dalit/compo_outlays_adivasis.csv")
+            .defer(d3.csv, "data/dalit/compo_outlays_dalits.csv")
+            .defer(d3.csv, "data/adivasis/compo_outlays_adivasis.csv")
 
-             .defer(d3.csv, "data/drinkin_water/compo_drinking_water.csv")
+            .defer(d3.csv, "data/drinkin_water/compo_drinking_water.csv")
 
-             .defer(d3.csv, "data/tax/tax_gdp.csv")
-             .defer(d3.csv, "data/compo_misc_capital_recipts.csv")
+            .defer(d3.csv, "data/tax/tax_gdp.csv")
+            .defer(d3.csv, "data/compo_misc_capital_recipts.csv")
             .await(populateTableData);
 
-        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, food_security, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, children, compo_children_sector_budget, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts) {
+        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, food_security, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, children, compo_children_sector_budget, compo_outlays_dalits, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts) {
             table_data["overview"] = overview;
             table_data["transfer_of_resources_to_states"] = transfer_of_resources_to_states;
             table_data["social_sector_allocations_and_priorities"] = social_sector_allocations_and_priorities;
@@ -244,6 +245,7 @@
             table_data["compo_children_sector_budget"] = compo_children_sector_budget
 
             table_data["compo_outlays_adivasis"] = compo_outlays_adivasis
+            table_data["compo_outlays_dalits"] = compo_outlays_dalits
 
             table_data["compo_drinking_water"] = compo_drinking_water
 
@@ -539,7 +541,7 @@
                 .showControls(false)
             }
             chart.legend.align(false) 
-            chart.legend.margin({top: 0, right:30, left:0, bottom: 0});   
+            chart.legend.margin({top: 5, right:30, left:0, bottom: 0});   
 
              if (screen.width < 480) {
                 chart.height(250)
