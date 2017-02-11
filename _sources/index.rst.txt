@@ -38,10 +38,9 @@ Contents
    climate_change
    women/index
    children/index
-   dalits
+   dalits/index
+   adivasis/index
    religious_minorities
    social_security
    urban_poverty
    persons_with_disabilities
-
-
