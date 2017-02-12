@@ -33,9 +33,7 @@ Contents
    drinking_water_and_sanitation/index
    rural_development
    agriculture/index
-   food_security
-   nutrition
-   climate_change
+   nutrition/index
    women/index
    children/index
    dalits/index

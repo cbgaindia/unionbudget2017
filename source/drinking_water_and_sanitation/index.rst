@@ -1,4 +1,4 @@
-Drinking water and sanitation
+Drinking water and Sanitation
 =================================
 
 .. toctree::
