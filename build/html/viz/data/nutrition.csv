@@ -1,22 +1,22 @@
-slug_name,index_name,2012-13,2013-14,2014-15,2015-16,2016-17 BE,2016-17 RE,2017-18 BE,color,unit
-core_icds_anganwadi_services,Core ICDS/ Anganwadi services,15767.2,16400.8,16683.6,15489.3,14850,14735.6,16745.2,#FF9800,Rs. Crore
-national_creche_scheme,National Creche Scheme,106,100,97.7,133,150,150,200,#FF9801,Rs. Crore
-igmsy_mbp,IGMSY/MBP,82.1,231.9,343.1,233.4,400,634,2700,#FF9802,Rs. Crore
-sabla,SABLA,503.6,603,622.4,475.2,460,460,460,#FF9803,Rs. Crore
-food_subsidy,Food subsidy,85000,92000,117671.2,139419,134834.6,135173,145338.6,#FF9804,Rs. Crore
-nrhm_+_nuhm,NRHM + NUHM,18046.7,18633.8,19751.5,18971.5,19037,20037,21940.7,#FF9805,Rs. Crore
-mid-day_meal_(mdm),Mid-day Meal (MDM),10761.4,10917.6,10523.5,9144.89,9700,9700,10000,#FF9806,Rs. Crore
-rmsa,RMSA,3172,2679,3398,3562.61,3700,3700,3830,#FF9807,Rs. Crore
-nrdwp,NRDWP,10489.9,9691.3,9242.8,4369.6,5000,6000,6050,#FF9808,Rs. Crore
-sbm_(rural_+_urban),SBM (Rural + Urban),2473.5,2243.5,3700.5,7469.2,11300,12800,16248.3,#FF9809,Rs. Crore
-mgnrega,MGNREGA,30273,32994.1,32976.7,37340.7,38500,47499,48000,#FF9810,Rs. Crore
-nlm_(nrlm_+_nulm),NLM (NRLM + NULM),2195.4,2022.1,2116.3,2783.1,3325,3334,4849,#FF9811,Rs. Crore
-nsap,NSAP,7825,9406,7083.7,8616.4,9500,9500,9500,#FF9812,Rs. Crore
-nfsm,NFSM,1722.9,2027,1872.7,1162.3,1700,1280,1720,#FF9813,Rs. Crore
-nmsa,NMSA,0,0,1268.4,685.9,1062.5,880,1226,#FF9814,Rs. Crore
-nmoop,NMOOP,398.5,555.8,316.3,305.8,502.7,376,403,#FF9815,Rs. Crore
-rkvy,RKVY,8400,7052.5,8443.2,3940,5400,3550,4750,#FF9816,Rs. Crore
-white_revolution,White Revolution,1434.71,1449,999.5,937.1,1138,1311.8,1634,#FF9817,Rs. Crore
-blue_revolution,Blue Revolution,329.81,347.5,388,200,246.8,392.3,400.7,#FF9818,Rs. Crore
-national_horticulture_mission$,National Horticulture Mission$,1089.3,1809.3,1954.7,1696.5,1620,1660,2320,#FF9819,Rs. Crore
-total_nutrition,Total Nutrition,200071,211164,239454,256936,262427,273173,298315,#FF9820,Rs. Crore
+slug_name,index_name,2012-13,2013-14,2014-15,2015-16,2016-17(BE),2016-17(RE),2017-18(BE),color,unit
+core_icds_anganwadi_services,Core Integrated Child Development Services(ICDS)/ Anganwadi services,15767.2,16400.8,16683.6,15489.3,14850,14735.6,16745.2,#E8B836,Rs. Crore
+national_creche_scheme,National Creche Scheme,106,100,97.7,133,150,150,200,#E8B837,Rs. Crore
+igmsy_mbp,Indira Gandhi Matritva Sahyog Yojana (IGMSY)/Maternity Benefit Programme (MBP),82.1,231.9,343.1,233.4,400,634,2700,#E8B838,Rs. Crore
+sabla,SABLA,503.6,603,622.4,475.2,460,460,460,#E8B839,Rs. Crore
+food_subsidy,Food subsidy,85000,92000,117671.2,139419,134834.6,135173,145338.6,#E8B840,Rs. Crore
+nrhm_nuhm,National Rural Health Mission (NRHM) + National Urban Health Mission (NUHM),18046.7,18633.8,19751.5,18971.5,19037,20037,21940.7,#E8B841,Rs. Crore
+mid_day_meal,Mid-day Meal (MDM),10761.4,10917.6,10523.5,9144.89,9700,9700,10000,#E8B842,Rs. Crore
+rmsa,Rashtriya Madhyamik Shiksha Abhiyan (RMSA),3172,2679,3398,3562.61,3700,3700,3830,#E8B843,Rs. Crore
+nrdwp,National Rural Driniking Water Programme (NRDWP),10489.9,9691.3,9242.8,4369.6,5000,6000,6050,#E8B844,Rs. Crore
+sbm_rural_urban,Swachh Bharat Mission (Rural + Urban),2473.5,2243.5,3700.5,7469.2,11300,12800,16248.3,#E8B845,Rs. Crore
+mgnrega,Mahatma Gandhi National Rural Employment Guarantee Act(MGNREGA),30273,32994.1,32976.7,37340.7,38500,47499,48000,#E8B846,Rs. Crore
+nlm_nrlm_nulm,National Livelihoods Mission (NRLM + NULM),2195.4,2022.1,2116.3,2783.1,3325,3334,4849,#E8B847,Rs. Crore
+nsap,National Social Assistance Programme (NSAP),7825,9406,7083.7,8616.4,9500,9500,9500,#E8B848,Rs. Crore
+nfsm,National Food Security Mission (NFSM),1722.9,2027,1872.7,1162.3,1700,1280,1720,#E8B849,Rs. Crore
+nmsa,National Mission for Sustainable Agriculture (NMSA),0,0,1268.4,685.9,1062.5,880,1226,#E8B850,Rs. Crore
+nmoop,National Mission on Oilseeds and Oil Palm (NMOOP),398.5,555.8,316.3,305.8,502.7,376,403,#E8B851,Rs. Crore
+rkvy,Rashtriya Krishi Vikas Yojana (RKVY),8400,7052.5,8443.2,3940,5400,3550,4750,#E8B852,Rs. Crore
+white_revolution,White Revolution,1434.71,1449,999.5,937.1,1138,1311.8,1634,#E8B853,Rs. Crore
+blue_revolution,Blue Revolution,329.81,347.5,388,200,246.8,392.3,400.7,#E8B854,Rs. Crore
+national_horticulture_mission,National Horticulture Mission,1089.3,1809.3,1954.7,1696.5,1620,1660,2320,#E8B855,Rs. Crore
+total_nutrition,Total Nutrition,200071,211164,239454,256936,262427,273173,298315,#E8B856,Rs. Crore

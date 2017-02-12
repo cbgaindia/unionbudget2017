@@ -208,9 +208,10 @@
 
             .defer(d3.csv, "data/tax/tax_gdp.csv")
             .defer(d3.csv, "data/compo_misc_capital_recipts.csv")
+            .defer(d3.csv, "data/nutrition/outlays_for_nutrition_schemes.csv")
             .await(populateTableData);
 
-        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, food_security, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, children, compo_children_sector_budget, compo_outlays_dalits, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts) {
+        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, food_security, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, children, compo_children_sector_budget, compo_outlays_dalits, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts, outlays_for_nutrition_schemes) {
             table_data["overview"] = overview;
             table_data["transfer_of_resources_to_states"] = transfer_of_resources_to_states;
             table_data["social_sector_allocations_and_priorities"] = social_sector_allocations_and_priorities;
@@ -251,6 +252,7 @@
 
             table_data["tax_gdp"] = tax_gdp
             table_data["compo_misc_capital_recipts"] = compo_misc_capital_recipts
+            table_data["outlays_for_nutrition_schemes"] = outlays_for_nutrition_schemes
             setup_environment(table_data)
 
 
@@ -528,7 +530,7 @@
                 .reduceXTicks(false) 
                 //Show bar value next to each bar.
                 .showControls(true); //Allow user to switch between "Grouped" and "Stacked" mode.
-            
+           
             if( indicator == "nostack")
             {
                 chart.stacked(false)
