@@ -1,16 +1,11 @@
-slug_name,index_name,"12th Plan
- Proposed Allocation",2012-13,2013-14,2014-15 ,2015-16(RE),2016-17(BE),Total Allocation and Expenditure in 12th Plan,2015-16,2016-17,viz_type,unit,notes,insights
-fund_allocation_under_ministry_of_minority_affairs(be),Fund Allocation under Ministry of Minority Affairs(BE),,3155.0,3531.0,3734.0,,,,3738.0,3827.0,,Rs crore,,
-fund_allocation_under_ministry_of_minority_affairs(re),Fund Allocation under Ministry of Minority Affairs(RE),,2218.0,3131.0,3165.0,,,,3736.0,,,Rs crore,,
-total_expenditure_of_minority_affairs,Total Expenditure of Minority Affairs,,2158.0,3026.0,3089.0,,,,,,,Rs crore,,
-utilization_of_fund_allocated_under_ministry_of_minority_affairs,Utilization of Fund Allocated under Ministry of Minority Affairs,,60.4,86.0,82.7,,,,,,,Percentage,Utilisation has been reported taking into account BE figures.,
-maulana_azad_education_foundation,Maulana Azad Education Foundation,500.0,0.0,160.0,113.0,113.0,113.0,499.0,,,,Rs crore,,
-free_coaching_and_allied_scheme,Free Coaching and Allied Scheme,120.0,14.0,23.68,31.39,45.0,45.0,159.07,,,,Rs crore,,
-merit-cum-means,Merit-Cum-Means,1580.0,181.18,259.9,381.38,315.0,335.0,1472.46,,,,Rs crore,,
-pre-matric_scholarship,Pre-Matric Scholarship,5000.0,786.14,962.99,1128.84,990.0,931.0,4798.97,,,,Rs crore,,
-"post_matric
-scholarship","Post Matric
-Scholarship",2850.0,326.43,515.67,501.32,500.0,550.0,2393.42,,,,Rs crore,,
-maulana_azad_national_fellowship,Maulana Azad National Fellowship,430.0,66.0,50.02,12.0,50.31,80.0,258.33,,,,Rs crore,,
-nmdfc,NMDFC,600.0,99.64,0.0,30.0,108.0,140.0,377.64,,,,Rs crore,,
-msdp,MSDP,5650.0,641.26,953.48,768.2,1011.39,1125.0,4499.33,,,,Rs crore,,
+slug_name,index_name,2012-13,2013-14,2014-15 ,2015-16,2016-17(BE),2016-17(RE),2017-18(BE),unit,color
+fund_allocation_for_ministry_of_minority_affairs,Fund Allocation for Ministry of Minority Affairs,2174,3026,3089,3654.8,3827,3827,4195,Rs.crore,#E8B836
+fund_utilization_percentage_of_ministry_of_minority_affairs_over_budget_estimates,Fund Utilization % of Ministry of Minority Affairs over Budget Estimates,68.9,86,83,97.8,,,,Percentage,#E8B836
+maulan_azad_foundation,Maulan Azad Foundation,0,160,113,113,,114,113,Rs.crore,#E8B836
+merit_cum_means,Merit Cum Means,181,259.9,381.3,315,,395,392.93,Rs.crore,#E8B836
+free_coaching,Free Coaching,14,23.6,31.3,44.84,,40,48,Rs.crore,#E8B836
+pre_matric,Pre Matric,786,962.9,1128.8,1015.73,,931,950,Rs.crore,#E8B836
+post_matric,Post Matric,326.4,515.6,501.3,552.83,,550,550,Rs.crore,#E8B836
+maulana_azad_fellowship,Maulana Azad Fellowship,66,50,0.12,55.52,,120,100,Rs.crore,#E8B836
+national_minorities_development_finance_corporation,National Minorities Development & Finance Corporation,85,0,30,120,,140,170,Rs.crore,#E8B836
+multi_sectoral_development_programme,Multi-sectoral Development Programme,641.2,953.4,768.2,1120.73,,1059,1200,Rs.crore,#E8B836

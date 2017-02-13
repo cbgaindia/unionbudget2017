@@ -1,2 +1,0 @@
-Persons with disabilities
-============================

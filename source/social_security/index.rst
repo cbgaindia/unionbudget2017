@@ -1,0 +1,28 @@
+Social Security
+==================
+
+Contents:
+
+.. toctree::
+	:maxdepth: 2
+
+	highlights
+        social_security_as_perc_of_total_exp
+	social_security_as_per_of_gdp
+	creation_of_national_platform_of_unorganized_workers_and_allotment_of_an_aadhaar_seeded_identification_numbers
+	social_security_for_unorganised_workers
+	national_health_protection_scheme_rssy
+	national_social_assistance_programme
+	swavalamban_scheme
+	govt_contribution_to_aam_admi_bima_yojana
+	atal_pension_yojana
+	interest_subsidy_to_lic_for_pension_plan_for_senior_citizens
+	pradhan_mantri_jeevan_jyoti_bima_yojana_and_pradhan_mantri_suraksha_bima_yojana_publicity_and_awareness
+	total_union_budget_outlays_for_social_security_under_various_schemes
+	indira_gandhi_national_old_age_pension_scheme_ignoaps
+	national_family_benefit_scheme_nfbs
+	indira_gandhi_national_widow_pension_scheme_ignwps
+	indira_gandhi_national_disability_pension_scheme_igndps
+	annapurna_scheme
+	national_social_assistance_program_adm_expenditure
+	total-national_social_assistance_programme

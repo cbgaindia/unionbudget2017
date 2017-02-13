@@ -127,7 +127,7 @@ todo_include_todos = False
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = "Union Budget Analysis Tool 2017-18"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
