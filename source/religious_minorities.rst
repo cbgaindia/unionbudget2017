@@ -1,2 +1,0 @@
-Religious minorities
-============================

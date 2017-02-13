@@ -31,14 +31,14 @@ Contents
    education/index
    health/index
    drinking_water_and_sanitation/index
-   rural_development
+   rural_development/index
    agriculture/index
    nutrition/index
+   renewable_energy/index
    women/index
    children/index
    dalits/index
    adivasis/index
-   religious_minorities
-   social_security
-   urban_poverty
-   persons_with_disabilities
+   religious_minorities/index
+   social_security/index
+   urban_poverty/index
