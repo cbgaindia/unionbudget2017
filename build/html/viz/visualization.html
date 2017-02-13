@@ -168,10 +168,9 @@
     function loadDatasets() {
         var table_data = {};
         queue()
-            .defer(d3.csv, "data/table_list.csv")
-            .defer(d3.csv, "data/overview.csv")
+            .defer(d3.csv, "data/budget_overview.csv")
             .defer(d3.csv, "data/transfer_of_resources_to_states.csv")
-            .defer(d3.csv, "data/social_sector_allocations_and_priorities.csv")
+            .defer(d3.csv, "data/total_expenditure_by_select_ministries.csv")
             .defer(d3.csv, "data/tax_gdp_buoyancy.csv")
             .defer(d3.csv, "data/annual_estimated_revenue_foregone.csv")
             .defer(d3.csv, "data/price_rise.csv")
@@ -206,12 +205,13 @@
             .defer(d3.csv, "data/nutrition/outlays_for_nutrition_schemes.csv")
             .defer(d3.csv, "data/renewable_energy/allocations_for_ministry_of_new_renewable_energy.csv")
             .defer(d3.csv, "data/renewable_energy/allocations_for_schemes_under_mnre.csv")
+            .defer(d3.csv, "data/persons_with_disabilities.csv")
             .await(populateTableData);
 
-        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, rural_development, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, children, compo_children_sector_budget, compo_outlays_dalits, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts, outlays_for_nutrition_schemes, allocations_for_ministry_of_new_renewable_energy, allocations_for_schemes_under_mnre) {
-            table_data["overview"] = overview;
+        function populateTableData(error, budget_overview, transfer_of_resources_to_states, total_expenditure_by_select_ministries, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, rural_development, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, children, compo_children_sector_budget, compo_outlays_dalits, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts, outlays_for_nutrition_schemes, allocations_for_ministry_of_new_renewable_energy, allocations_for_schemes_under_mnre, persons_with_disabilities) {
+            table_data["budget_overview"] = budget_overview;
             table_data["transfer_of_resources_to_states"] = transfer_of_resources_to_states;
-            table_data["social_sector_allocations_and_priorities"] = social_sector_allocations_and_priorities;
+            table_data["total_expenditure_by_select_ministries"] = total_expenditure_by_select_ministries;
             table_data["tax_gdp_buoyancy"] = tax_gdp_buoyancy;
             table_data["annual_estimated_revenue_foregone"] = annual_estimated_revenue_foregone;
             table_data["price_rise"] = price_rise;
@@ -246,6 +246,7 @@
             table_data["outlays_for_nutrition_schemes"] = outlays_for_nutrition_schemes;
             table_data["allocations_for_ministry_of_new_renewable_energy"] = allocations_for_ministry_of_new_renewable_energy;
             table_data["allocations_for_schemes_under_mnre"] = allocations_for_schemes_under_mnre;
+            table_data["persons_with_disabilities"] = persons_with_disabilities;
             setup_environment(table_data)
 
 
@@ -418,9 +419,7 @@
                 .color([streamData[0].color]);
 
             chart.showLegend(false)
-           /* chart.pointShape("circle")
-            chart.pointSize(2)
-*/     
+            
             chart.yAxis.ticks(10)
                 .tickFormat(function(d) {
                     return formatAbbr(d)
@@ -449,11 +448,7 @@
             d3.select('#chart1 svg') 
                 .datum(streamData) 
                 .call(chart); 
-
-         
-            nv.utils.windowResize(function() {
-                /*chart.update()*/
-            });
+            nv.utils.windowResize(chart.update);
             return chart;
         });
 
@@ -662,6 +657,7 @@
     </script>
     <script>
     d3.select('#saveButton').on('click', function() {
+        
         svg = d3.select("#chart1 svg")
     
         width = svg[0][0].width["baseVal"].value
@@ -670,7 +666,7 @@
         svgString2Image(svgString, width, height, 'png', save); // passes Blob and filesize String to the callback
 
         function save(dataBlob, filesize) {
-            saveAs(dataBlob, 'Visualization.png'); // FileSaver.js function
+            saveAs(dataBlob, 'visualization.png'); // FileSaver.js function
         }
     });
 
@@ -753,7 +749,7 @@
         var format = format ? format : 'png';
 
         var imgsrc = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgString))); // Convert SVG string to dataurl
-
+        console.log(imgsrc)
         var canvas = document.createElement("canvas");
         var context = canvas.getContext("2d");
 
@@ -764,12 +760,10 @@
         image.onload = function() {
             context.clearRect(0, 0, width, height);
             context.drawImage(image, 0, 0, width, height);
-
             canvas.toBlob(function(blob) {
                 var filesize = Math.round(blob.length / 1024) + ' KB';
                 if (callback) callback(blob, filesize);
             });
-
 
         };
 

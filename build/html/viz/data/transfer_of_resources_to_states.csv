@@ -1,5 +1,13 @@
-slug_name,index_name,unit,2012-13,2013-14,2014-15,2015-16(BE),2015-16(RE),2016-17(BE)
-states_share_of_taxes_and_duties_as_%_of_gdp,States share of taxes and duties as % of GDP,Percentage of GDP,2.9,2.8,2.7,3.9,3.7,3.8
-non_plan_grants_and_loans_to_states_as_%_of_gdp,Non Plan grants and loans to states as % of GDP,Percentage of GDP,0.5,0.5,0.6,0.8,0.8,0.8
-central_assistance(ca)_to_states_as_%_of_gdp,Central Assistance(CA) to States as % of GDP,Percentage of GDP,1.0,0.9,2.2,1.6,1.6,1.6
-total_union_resources_transferred_to_states_as_%_of_gdp,Total Union Resources transferred to States as % of GDP,Percentage of GDP,4.8,4.6,5.4,6.2,6.1,6.1
+slug_name,index_name,2014-15 ,2015-16,2016-17(RE),2017-18(BE),unit,color
+states_share_of_taxes_and_duties,States’ share of taxes and duties,337808,506193,608000,674565,Rs crore,#6ea63a
+finance_commission_grants,Finance Commission Grants,,84579,99115,103101,Rs crore,#6ea63a
+scheme_related_transfers,Scheme Related Transfers,,195051,201363,212466,Rs crore,#6ea63a
+other_transfers,Other Transfers,,43143,44864,48447,Rs crore,#6ea63a
+transfer_to_north_eastern_states,Transfer to North Eastern States,,378,31422,42499,Rs crore,#6ea63a
+total_transfers_to_uts_with_legislature,Total Transfers to UTs with legislature,,5139,5547,3996,Rs crore,#6ea63a
+finance_commission_grants_and_other_transfers_to_states,Finance Commission grants and other transfers to states,348027,328290,382311,410509,Rs crore,#6ea63a
+total_transfers_to_states_and_ut_includes_loans,Total transfers to States and UT (includes loans),685835,830613,990311,1085075,Rs crore,#6ea63a
+gdp_at_current_market_prices,GDP at current market prices,12433749,13675331,15075429,16847455,Rs crore,#6ea63a
+states_share_of_central_taxes_and_duties_as_of_gdp,States’ share of central taxes and duties as % of GDP,2.7,3.7,4,4,Percentage,#6ea63a
+other_transfers_as_share_of_gdp,Other transfers as share of GDP,2.8,2.4,2.5,2.4,Percentage,#6ea63a
+total_union_resources_transferred_to_states_as_of_gdp,Total Union Resources transferred to States as % of GDP,5.5,6.1,6.6,6.4,Percentage,#6ea63a

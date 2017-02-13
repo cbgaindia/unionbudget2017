@@ -24,9 +24,9 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   expenditure_overview
-   transfer_of_resources_to_states
-   social_sector_allocations_and_priorities
+   budget_overview/index
+   transfer_of_resources_to_states/index
+   total_expenditure_by_select_ministries/index
    taxation/index
    education/index
    health/index
@@ -42,3 +42,4 @@ Contents
    religious_minorities/index
    social_security/index
    urban_poverty/index
+   persons_with_disabilities/index
