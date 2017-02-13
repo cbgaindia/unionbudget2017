@@ -1,0 +1,28 @@
+slug_name,index_name,2012-13,2013-14,2014-15 ,2015-16,2016-17(BE),2016-17(RE),2017-18(BE),unit,color
+ministry_of_culture,1. Ministry of Culture,1388,1989,2064,2007,2500,2489,2738,Rs crore,#e4af1b
+ministrydept_of_drinking_water_and_sanitation,2. Ministry/Dept. of Drinking Water and Sanitation,12969,11941,12091,11081,14010,16512,20011,Rs crore,#e4af1b
+ministry_of_health_and_family_welfare_including_ayush,3. Ministry of Health and Family Welfare (including AYUSH),27885,30135,32154,35190,39533,40995,50281,Rs crore,#e4af1b
+ministry_of_housing_and_urban_poverty_alleviation,4. Ministry of Housing and Urban Poverty Alleviation,933,1084,2728,1761,5411,5285,6406,Rs crore,#e4af1b
+ministry_of_human_resource_development,5. Ministry of Human Resource Development,66055,71322,68875,67239,72394,73599,79686,Rs crore,#e4af1b
+ministry_of_labour_and_employment,6. Ministry of Labour and Employment,3645,4233,4138,4642,6243,5174,7188,Rs crore,#e4af1b
+ministry_of_minority_affairs,7. Ministry of Minority Affairs,2174,3027,3089,3655,3827,3827,4195,Rs crore,#e4af1b
+ministry_of_social_justice_and_empowerment,8. Ministry of Social Justice and Empowerment,4940,5515,5381,5753,6566,6569,6908,Rs crore,#e4af1b
+ministry_of_tribal_affairs,9. Ministry of Tribal Affairs,3073,3839,3852,4480,4827,4827,5329,Rs crore,#e4af1b
+dept_of_urban_development,10. Dept. of Urban Development,8465,9363,13254,18419,24523,32550,34212,Rs crore,#e4af1b
+ministry_of_women_and_child_development,11. Ministry of Women and Child Development,17036,18037,18539,17249,17408,17640,22095,Rs crore,#e4af1b
+ministry_of_youth_affairs_and_sports,12. Ministry of Youth Affairs and Sports,871,1123,1121,1423,1592,1608,1943,Rs crore,#e4af1b
+empowerment_of_persons_with_disabilities,13. Empowerment of Persons with Disabilities,                                                                                                                                                                                                                                                                                             ,,403,555,784,784,855,Rs crore,#e4af1b
+ministry_of_agriculture_cooperation_and_farmers_welfare,"14. Ministry of Agriculture, Cooperation and Farmers Welfare",29654,31479,31917,22092,44485,48073,51026,Rs crore,#e4af1b
+ministry_of_environment_forest_and_climate_change,"15. Ministry of Environment, Forest and Climate Change ",1753,1890,1599,1521,2250,2328,2675,Rs crore,#e4af1b
+ministry_of_rural_development,16. Ministry of Rural Development,53181,61162,69817,78945,87765,97760,107758,Rs crore,#e4af1b
+ministry_of_consumer_affairs_food_and_public_distribution_food_subsidy,"17. Ministry of Consumer Affairs, Food and Public Distribution (Food Subsidy)",86677,93317,118323,140810,141392,143988,154232,Rs crore,#e4af1b
+total_expenditure_in_select_ministries_1_to_17,Total expenditure in select ministries (1 to 17),320698,349457,389346,416822,475509,504007,557540,Rs crore,#e4af1b
+ministry_of_road_transport_and_highways,18. Ministry of Road Transport and Highways,22537,28400,33048,46913,57976,52447,64900,Rs crore,#e4af1b
+defence,19. Defence,230642,254133,285005,293920,340922,345106,359854,Rs crore,#e4af1b
+total_expenditure_in_select_ministries_1_to_19,Total expenditure in select ministries (1 to 19),573877,631990,707400,757654,874407,901560,982294,Rs crore,#e4af1b
+total_union_government_expenditure,Total Union Government Expenditure,1410372,1559447,1663673,1790783,1978060,2014407,2146735,Rs crore,#e4af1b
+total_expenditure_in_ministries_1_to_17_as_share_of_total_union_govt_expenditure_in_perc,Total expenditure in ministries (1 to 17) as share of total Union Govt. expenditure (in %),22.7,22.4,23.4,23.3,24,25,26,Percentage,#e4af1b
+total_expenditure_in_ministries_1_to_19_as_share_of_total_union_govt_expenditure_in_perc,Total expenditure in ministries (1 to 19) as share of total Union Govt. expenditure (in %),40.7,40.5,42.5,42.3,44.2,44.8,45.8,Percentage,#e4af1b
+gdp_at_current_market_prices_series,GDP at current market prices (2011-12 series),9946636,11236635,12433749,13675331,15075429,15075429,16847455,Rs crore,#e4af1b
+total_expenditure_in_select_ministries_1_to_17_as_share_of_gdp_in_perc,Total expenditure in select ministries (1 to 17) as share of GDP (in %),3.2,3.1,3.1,3,3.2,3.3,3.3,Percentage,#e4af1b
+total_expenditure_in_select_ministries_1_to_19_as_share_of_gdp_in_perc,Total expenditure in select ministries (1 to 19) as share of GDP (in %),5.8,5.6,5.7,5.5,5.8,6,5.8,Percentage,#e4af1b

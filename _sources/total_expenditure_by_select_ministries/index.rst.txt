@@ -1,0 +1,35 @@
+Total Expenditure by Select Ministries
+======================================
+
+Contents:
+
+.. toctree::
+	:maxdepth: 2
+
+	ministry_of_culture
+	ministrydept_of_drinking_water_and_sanitation
+	ministry_of_health_and_family_welfare_including_ayush
+	ministry_of_housing_and_urban_poverty_alleviation
+	ministry_of_human_resource_development
+	ministry_of_labour_and_employment
+	ministry_of_minority_affairs
+	ministry_of_social_justice_and_empowerment
+	ministry_of_tribal_affairs
+	dept_of_urban_development
+	ministry_of_women_and_child_development
+	ministry_of_youth_affairs_and_sports
+	empowerment_of_persons_with_disabilities
+	ministry_of_agriculture_cooperation_and_farmers_welfare
+	ministry_of_environment_forest_and_climate_change
+	ministry_of_rural_development
+	ministry_of_consumer_affairs_food_and_public_distribution_food_subsidy
+	total_expenditure_in_select_ministries_1_to_17
+	ministry_of_road_transport_and_highways
+	defence
+	total_expenditure_in_select_ministries_1_to_19
+	total_union_government_expenditure
+	total_expenditure_in_ministries_1_to_17_as_share_of_total_union_govt_expenditure_in_perc
+	total_expenditure_in_ministries_1_to_19_as_share_of_total_union_govt_expenditure_in_perc
+	gdp_at_current_market_prices_series
+	total_expenditure_in_select_ministries_1_to_17_as_share_of_gdp_in_perc
+	total_expenditure_in_select_ministries_1_to_19_as_share_of_gdp_in_perc
