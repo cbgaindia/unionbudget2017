@@ -180,7 +180,7 @@
             .defer(d3.csv, "data/drinking_water_and_sanitation.csv")
             .defer(d3.csv, "data/ministry_of_rural_development.csv")
             .defer(d3.csv, "data/agriculture.csv")
-            .defer(d3.csv, "data/food_security.csv")
+            .defer(d3.csv, "data/rural_development.csv")
             .defer(d3.csv, "data/nutrition.csv")
             .defer(d3.csv, "data/climate_change.csv")
             .defer(d3.csv, "data/women.csv")
@@ -194,24 +194,21 @@
             .defer(d3.csv, "data/share_of_expenditure_by_moa.csv")
             .defer(d3.csv, "data/share_of_food_subsidy_allocation.csv")
             .defer(d3.csv, "data/education/compo_mhrd.csv")
-
             .defer(d3.csv, "data/energy/compo_energy.csv")
             .defer(d3.csv, "data/energy/compo_prog_mnre.csv")
-            
             .defer(d3.csv, "data/children.csv")
             .defer(d3.csv, "data/children/compo_children_sector_budget.csv")
-
             .defer(d3.csv, "data/dalit/compo_outlays_dalits.csv")
             .defer(d3.csv, "data/adivasis/compo_outlays_adivasis.csv")
-
             .defer(d3.csv, "data/drinkin_water/compo_drinking_water.csv")
-
             .defer(d3.csv, "data/tax/tax_gdp.csv")
             .defer(d3.csv, "data/compo_misc_capital_recipts.csv")
             .defer(d3.csv, "data/nutrition/outlays_for_nutrition_schemes.csv")
+            .defer(d3.csv, "data/renewable_energy/allocations_for_ministry_of_new_renewable_energy.csv")
+            .defer(d3.csv, "data/renewable_energy/allocations_for_schemes_under_mnre.csv")
             .await(populateTableData);
 
-        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, food_security, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, children, compo_children_sector_budget, compo_outlays_dalits, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts, outlays_for_nutrition_schemes) {
+        function populateTableData(error, table_list, overview, transfer_of_resources_to_states, social_sector_allocations_and_priorities, tax_gdp_buoyancy, annual_estimated_revenue_foregone, price_rise, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, rural_development, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, children, compo_children_sector_budget, compo_outlays_dalits, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts, outlays_for_nutrition_schemes, allocations_for_ministry_of_new_renewable_energy, allocations_for_schemes_under_mnre) {
             table_data["overview"] = overview;
             table_data["transfer_of_resources_to_states"] = transfer_of_resources_to_states;
             table_data["social_sector_allocations_and_priorities"] = social_sector_allocations_and_priorities;
@@ -223,7 +220,7 @@
             table_data["drinking_water_and_sanitation"] = drinking_water_and_sanitation;
             table_data["ministry_of_rural_development"] = ministry_of_rural_development;
             table_data["agriculture"] = agriculture;
-            table_data["food_security"] = food_security;
+            table_data["rural_development"] = rural_development;
             table_data["nutrition"] = nutrition;
             table_data["climate_change"] = climate_change;
             table_data["women"] = women;
@@ -236,23 +233,19 @@
             table_data["disability"] = disability;
             table_data["share_of_expenditure_by_moa"] = share_of_expenditure_by_moa;
             table_data["share_of_food_subsidy_allocation"] = share_of_food_subsidy_allocation;
-
             table_data["compo_mhrd"] = compo_mhrd;
-
             table_data["compo_energy"] = compo_energy;
             table_data["compo_prog_mnre"] = compo_prog_mnre;
-
-            table_data["children"] = children
-            table_data["compo_children_sector_budget"] = compo_children_sector_budget
-
-            table_data["compo_outlays_adivasis"] = compo_outlays_adivasis
-            table_data["compo_outlays_dalits"] = compo_outlays_dalits
-
-            table_data["compo_drinking_water"] = compo_drinking_water
-
-            table_data["tax_gdp"] = tax_gdp
-            table_data["compo_misc_capital_recipts"] = compo_misc_capital_recipts
-            table_data["outlays_for_nutrition_schemes"] = outlays_for_nutrition_schemes
+            table_data["children"] = children;
+            table_data["compo_children_sector_budget"] = compo_children_sector_budget;
+            table_data["compo_outlays_adivasis"] = compo_outlays_adivasis;
+            table_data["compo_outlays_dalits"] = compo_outlays_dalits;
+            table_data["compo_drinking_water"] = compo_drinking_water;
+            table_data["tax_gdp"] = tax_gdp;
+            table_data["compo_misc_capital_recipts"] = compo_misc_capital_recipts;
+            table_data["outlays_for_nutrition_schemes"] = outlays_for_nutrition_schemes;
+            table_data["allocations_for_ministry_of_new_renewable_energy"] = allocations_for_ministry_of_new_renewable_energy;
+            table_data["allocations_for_schemes_under_mnre"] = allocations_for_schemes_under_mnre;
             setup_environment(table_data)
 
 

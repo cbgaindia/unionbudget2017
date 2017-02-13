@@ -1,0 +1,7 @@
+Allocation for Different Components of Pradhan Mantri Awas Yojna-Urban (PMAY-Urban)
+===================================================================================
+
+.. raw:: html
+
+	<iframe src="../viz/visualization.html#groupbarchart/allocations_for_pmay_urban/stack" width="100%", height="500",  frameBorder="0"></iframe>
+
