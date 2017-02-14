@@ -26,6 +26,7 @@ Contents
 
    budget_overview/index
    transfer_of_resources_to_states/index
+   total_cess_and_surcharges    
    total_expenditure_by_select_ministries/index
    taxation/index
    education/index
@@ -34,12 +35,12 @@ Contents
    rural_development/index
    agriculture/index
    nutrition/index
-   renewable_energy/index
+   climate_change/index
    women/index
    children/index
    dalits/index
    adivasis/index
    religious_minorities/index
    social_security/index
-   urban_poverty/index
+   urban_poor/index
    persons_with_disabilities/index

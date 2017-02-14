@@ -1,16 +1,16 @@
 slug_name,index_name,2012-13,2013-14,2014-15,2015-16,2016-17 (BE),2016-17 (RE),2017-18 (BE),unit,color
-department_of_health_&_family_welfare_(including_department_of_aids_control),Department of Health & Family Welfare (including Department of AIDS control),26449,28618.4,30626.4,33121.4,37061.5,38343.3,47352.5,Rs crore,#84C443
-department_of_health_research,Department of Health Research,720,874.1,910.8,992.8,1144.8,1344.8,1500,Rs crore,#84C443
-total_ministry_of_health_&_family_welfare,Total Ministry of Health & Family Welfare,27169,29492.5,31537.2,34114.2,38206.3,39688.1,48852.5,Rs crore,#84C443
-ministry_of_ayush,Ministry of AYUSH,715,642.4,616.8,1075.3,1326.2,1307.4,1428.65,Rs crore,#84C443
-national_health_mission_(nhm),National Health Mission (NHM),18046.7,18633.8,19751.4,20213.2,20762,22597.95,27131.2,Rs crore,#84C443
-pradhan_mantri_swasthya_suraksha_yojana_(pmssy),Pradhan Mantri Swasthya Suraksha Yojana (PMSSY),989,1273.2,822,1577.85,2450,1953.24,3975,Rs crore,#84C443
-national_health_protection_scheme,National Health Protection Scheme,1001.7,887.5,550.6,,1500,724,1000,Rs crore,#84C443
-jan_aushadhi_scheme,Jan Aushadhi Scheme,1.7,15.2,-,16.91,35,49.75,74.62,Rs crore,#84C443
-total_expenditure_(rs._in_crore)_,Total Expenditure (Rs. In Crore) ,1410372,1559447,1663673,1790783,1978060,2014407,2146735,Rs crore,#84C443
-gdp_at_current_market_prices_(rs._in_crore),GDP at Current Market Prices (Rs. In Crore),9946636,11236635,12433749,13675331,15075429,15075429,16847455,Rs crore,#84C443
-total_mohfw_as_percent_of_total_expenditure,Total MoHFW as percent of Total Expenditure,1.9,1.9,1.9,1.9,1.9,2,2.3,Percentage(%),#84C443
-total_nhm_as_percent_of_gdp,Total NHM as percent of GDP,0.18,0.17,0.16,0.15,0.14,0.15,0.16,Percentage(%),#84C443
-total_mohfw_as_percent_of_gdp_(excl._ayush),Total MoHFW as percent of GDP (excl. AYUSH),0.27,0.26,0.25,0.25,0.25,0.26,0.29,Percentage(%),#84C443
-total_nhm_as_percent_of_mohfw_(incl._ayush),Total NHM as percent of MoHFW (incl. AYUSH),65,62,61,57,53,55,54,Percentage(%),#84C443
-total_mohfw_as_percent_of_gdp_(incl._ayush),Total MoHFW as percent of GDP (incl. AYUSH),0.28,0.27,0.26,0.26,0.26,0.27,0.3,Percentage(%),#84C4430
+department_of_health_&_family_welfare_(including_department_of_aids_control),Department of Health & Family Welfare (including Department of AIDS control),26449,28618.4,30626.4,33121.4,37061.5,38343.3,47352.5,Rs crore,#6ea63a
+department_of_health_research,Department of Health Research,720,874.1,910.8,992.8,1144.8,1344.8,1500,Rs crore,#6ea63a
+total_ministry_of_health_&_family_welfare,Total Ministry of Health & Family Welfare,27169,29492.5,31537.2,34114.2,38206.3,39688.1,48852.5,Rs crore,#6ea63a
+ministry_of_ayush,Ministry of AYUSH,715,642.4,616.8,1075.3,1326.2,1307.4,1428.65,Rs crore,#6ea63a
+national_health_mission_(nhm),National Health Mission (NHM),18046.7,18633.8,19751.4,20213.2,20762,22597.95,27131.2,Rs crore,#6ea63a
+pradhan_mantri_swasthya_suraksha_yojana_(pmssy),Pradhan Mantri Swasthya Suraksha Yojana (PMSSY),989,1273.2,822,1577.85,2450,1953.24,3975,Rs crore,#6ea63a
+national_health_protection_scheme,National Health Protection Scheme,1001.7,887.5,550.6,,1500,724,1000,Rs crore,#6ea63a
+jan_aushadhi_scheme,Jan Aushadhi Scheme,1.7,15.2,-,16.91,35,49.75,74.62,Rs crore,#6ea63a
+total_expenditure_(rs._in_crore)_,Total Expenditure (Rs. In Crore) ,1410372,1559447,1663673,1790783,1978060,2014407,2146735,Rs crore,#6ea63a
+gdp_at_current_market_prices_(rs._in_crore),GDP at Current Market Prices (Rs. In Crore),9946636,11236635,12433749,13675331,15075429,15075429,16847455,Rs crore,#6ea63a
+total_mohfw_as_percent_of_total_expenditure,Total MoHFW as percent of Total Expenditure,1.9,1.9,1.9,1.9,1.9,2,2.3,Percentage(%),#6ea63a
+total_nhm_as_percent_of_gdp,Total NHM as percent of GDP,0.18,0.17,0.16,0.15,0.14,0.15,0.16,Percentage(%),#6ea63a
+total_mohfw_as_percent_of_gdp_(excl._ayush),Total MoHFW as percent of GDP (excl. AYUSH),0.27,0.26,0.25,0.25,0.25,0.26,0.29,Percentage(%),#6ea63a
+total_nhm_as_percent_of_mohfw_(incl._ayush),Total NHM as percent of MoHFW (incl. AYUSH),65,62,61,57,53,55,54,Percentage(%),#6ea63a
+total_mohfw_as_percent_of_gdp_(incl._ayush),Total MoHFW as percent of GDP (incl. AYUSH),0.28,0.27,0.26,0.26,0.26,0.27,0.3,Percentage(%),#6ea63a0

@@ -1,5 +1,5 @@
-Blue Revolution
-==================
+Blue Revolution (Integrated  Development and Management of Fisheries)
+=====================================================================
 
 .. raw:: html
 

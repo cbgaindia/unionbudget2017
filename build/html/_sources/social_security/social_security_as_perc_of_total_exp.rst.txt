@@ -1,5 +1,5 @@
-Social Security as % of Total Exp
-====================================
+Budget outlay for Major Social Security Schemes as % of Total Budget Expenditure
+================================================================================
 
 .. raw:: html
 
