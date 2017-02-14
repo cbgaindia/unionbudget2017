@@ -1,20 +1,19 @@
 slug_name,index_name,2012-13,2013-14,2014-15 ,2015-16,2016-17(BE),2016-17(RE),2017-18(BE),unit,color
-social_security_as_perc_of_total_exp,Social Security as % of Total Exp,0.64,0.65,0.49,0.54,0.62,0.52,0.53,Percentage,#5DC8DA
-social_security_as_per_of_gdp,Social Security as % of GDP,0.09,0.09,0.07,0.07,0.08,0.07,0.07,Percentage,#5DC8DA
-creation_of_national_platform_of_unorganized_workers_and_allotment_of_an_aadhaar_seeded_identification_numbers,Creation of National Platform of Unorganized Workers and allotment of an Aadhaar seeded identification numbers,0,0,0,45.3,144.5,0.5,100,Rs crore,#5DC8DA
-social_security_for_unorganised_workers,Social Security for unorganised Workers (RSBY),1001.7,887.6,550.7,0,0,0,0,Rs crore,#5DC8DA
-national_health_protection_scheme_rssy,National Health Protection Scheme/RSSY,0,0,0,0,1500,723.8,1000,Rs crore,#5DC8DA
-national_social_assistance_programme,National Social Assistance Programme,7824.8,9046,7086.7,8616.4,9500,9500,9500,Rs crore,#5DC8DA
-swavalamban_scheme,Swavalamban Scheme,104.4,152.9,195,250.6,209,0,50,Rs crore,#5DC8DA
-govt._contribution_to_aam_admi_bima_yojana,Govt. contribution to Aam Admi Bima Yojana,0,4.5,175,437.5,450,100,350,Rs crore,#5DC8DA
-atal_pension_yojana,Atal Pension Yojana,0,0,0,173,200,40,155,Rs crore,#5DC8DA
-interest_subsidy_to_lic_for_pension_plan_for_senior_citizens,Interest Subsidy to LIC for Pension Plan for Senior Citizens,99.5,115.8,111.2,101.8,171.9,136.6,250,Rs crore,#5DC8DA
-pradhan_mantri_jeevan_jyoti_bima_yojana_and_pradhan_mantri_suraksha_bima_yojana_publicity_and_awareness,Pradhan Mantri Jeevan Jyoti Bima Yojana and Pradhan Mantri Suraksha Bima Yojana (Publicity and Awareness),0,0,0,0,50,5,20,Rs crore,#5DC8DA
-total_union_budget_outlays_for_social_security_under_various_schemes,Total Union Budget Outlays for Social Security under Various Schemes,9030.4,10206.8,8118.6,9624.7,12225.4,10505.9,11425,Rs crore,#5DC8DA
-indira_gandhi_national_old_age_pension_scheme_ignoaps,Indira Gandhi National Old Age Pension Scheme (IGNOAPS),,,,5562.7,6130.9,6130.9,6126.9,Rs crore,#5DC8DA
-national_family_benefit_scheme_nfbs,National Family Benefit Scheme (NFBS),,,,639.4,787.2,787.2,774.1,Rs crore,#5DC8DA
-indira_gandhi_national_widow_pension_scheme_ignwps,Indira Gandhi National Widow Pension Scheme(IGNWPS),,,,2068.9,2221.7,2221.7,2221.7,Rs crore,#5DC8DA
-indira_gandhi_national_disability_pension_scheme_igndps,Indira Gandhi National Disability Pension Scheme(IGNDPS),,,,288,279.3,279.3,274.3,Rs crore,#5DC8DA
-annapurna_scheme,Annapurna Scheme,,,,56.3,75.8,75.8,75.8,Rs crore,#5DC8DA
-national_social_assistance_program_adm_expenditure,National Social Assistance Program (Adm. Expenditure),,,,1.1,5.2,5.2,27.3,Rs crore,#5DC8DA
-total-national_social_assistance_programme,Total-National Social Assistance Programme,,,,8616.4,9500,9500,9500,Rs crore,#5DC8DA
+social_security_as_perc_of_total_exp,Social Security as % of Total Exp,0.64,0.65,0.49,0.54,0.62,0.52,0.53,Percentage,#2aa5bb
+social_security_as_per_of_gdp,Social Security as % of GDP,0.09,0.09,0.07,0.07,0.08,0.07,0.07,Percentage,#2aa5bb
+creation_of_national_platform_of_unorganized_workers_and_allotment_of_an_aadhaar_seeded_identification_numbers,Creation of National Platform of Unorganized Workers and allotment of an Aadhaar seeded identification numbers,0,0,0,45.3,144.5,0.5,100,Rs crore,#2aa5bb
+national_health_protection_scheme_rssy,National Health Protection Scheme/RSSY/RSBY,1001.7,887.6,550.7,0,1500,723.8,1000,Rs crore,#2aa5bb
+national_social_assistance_programme,National Social Assistance Programme,7824.8,9046,7086.7,8616.4,9500,9500,9500,Rs crore,#2aa5bb
+swavalamban_scheme,Swavalamban Scheme,104.4,152.9,195,250.6,209,0,50,Rs crore,#2aa5bb
+govt._contribution_to_aam_admi_bima_yojana,Govt. contribution to Aam Admi Bima Yojana,0,4.5,175,437.5,450,100,350,Rs crore,#2aa5bb
+atal_pension_yojana,Atal Pension Yojana,0,0,0,173,200,40,155,Rs crore,#2aa5bb
+interest_subsidy_to_lic_for_pension_plan_for_senior_citizens,Interest Subsidy to LIC for Pension Plan for Senior Citizens,99.5,115.8,111.2,101.8,171.9,136.6,250,Rs crore,#2aa5bb
+pradhan_mantri_jeevan_jyoti_bima_yojana_and_pradhan_mantri_suraksha_bima_yojana_publicity_and_awareness,Pradhan Mantri Jeevan Jyoti Bima Yojana and Pradhan Mantri Suraksha Bima Yojana (Publicity and Awareness),0,0,0,0,50,5,20,Rs crore,#2aa5bb
+total_union_budget_outlays_for_social_security_under_various_schemes,Total Union Budget Outlays for Social Security under Various Schemes,9030.4,10206.8,8118.6,9624.7,12225.4,10505.9,11425,Rs crore,#2aa5bb
+indira_gandhi_national_old_age_pension_scheme_ignoaps,Indira Gandhi National Old Age Pension Scheme (IGNOAPS),,,,5562.7,6130.9,6130.9,6126.9,Rs crore,#2aa5bb
+national_family_benefit_scheme_nfbs,National Family Benefit Scheme (NFBS),,,,639.4,787.2,787.2,774.1,Rs crore,#2aa5bb
+indira_gandhi_national_widow_pension_scheme_ignwps,Indira Gandhi National Widow Pension Scheme(IGNWPS),,,,2068.9,2221.7,2221.7,2221.7,Rs crore,#2aa5bb
+indira_gandhi_national_disability_pension_scheme_igndps,Indira Gandhi National Disability Pension Scheme(IGNDPS),,,,288,279.3,279.3,274.3,Rs crore,#2aa5bb
+annapurna_scheme,Annapurna Scheme,,,,56.3,75.8,75.8,75.8,Rs crore,#2aa5bb
+national_social_assistance_program_adm_expenditure,National Social Assistance Program (Adm. Expenditure),,,,1.1,5.2,5.2,27.3,Rs crore,#2aa5bb
+total-national_social_assistance_programme,Total-National Social Assistance Programme,,,,8616.4,9500,9500,9500,Rs crore,#2aa5bb

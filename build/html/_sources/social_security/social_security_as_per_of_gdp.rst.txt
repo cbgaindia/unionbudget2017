@@ -1,5 +1,5 @@
-Social Security as % of GDP
-==============================
+Budget outlay for Major Social Security Schemes as % of Gross Domestic Product (GDP)
+====================================================================================
 
 .. raw:: html
 
