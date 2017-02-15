@@ -7,5 +7,4 @@ Contents:
 	:maxdepth: 2
 
 	total_expenditure
-	gdp_at_current_market_prices
 	total_union_government_expenditure_as_a_proportion_of_gdp
