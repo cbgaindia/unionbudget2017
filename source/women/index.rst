@@ -16,5 +16,4 @@ Contents:
 	beti_bachao_beti_padhao
 	one_stop_centre
 	women_helpline
-	other_schemes
 	swadhar_greh
