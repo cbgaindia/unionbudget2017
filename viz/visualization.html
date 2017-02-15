@@ -204,9 +204,11 @@
             .defer(d3.csv, "data/climate_change/allocations_for_ministry_of_new_renewable_energy.csv")
             .defer(d3.csv, "data/climate_change/allocations_for_schemes_under_mnre.csv")
             .defer(d3.csv, "data/persons_with_disabilities.csv")
+            .defer(d3.csv, "data/climate_change/allocations_for_schemes_related_to_climate_change_adaptation.csv") 
+            .defer(d3.csv, "data/climate_change/allocations_for_selective_missions_under_napcc.csv")
             .await(populateTableData);
 
-        function populateTableData(error, budget_overview, transfer_of_resources_to_states, total_cess_and_surcharges, total_expenditure_by_select_ministries, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, rural_development, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, children, compo_children_sector_budget, compo_outlays_dalits, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts, outlays_for_nutrition_schemes, allocations_for_ministry_of_new_renewable_energy, allocations_for_schemes_under_mnre, persons_with_disabilities) {
+        function populateTableData(error, budget_overview, transfer_of_resources_to_states, total_cess_and_surcharges, total_expenditure_by_select_ministries, education, health, drinking_water_and_sanitation, ministry_of_rural_development, agriculture, rural_development, nutrition, climate_change, women, children, dalits, adivasis, religious_minorities, social_security, urban_poverty, disability, share_of_expenditure_by_moa, share_of_food_subsidy_allocation, compo_mhrd, compo_energy, compo_prog_mnre, children, compo_children_sector_budget, compo_outlays_dalits, compo_outlays_adivasis, compo_drinking_water, tax_gdp, compo_misc_capital_recipts, outlays_for_nutrition_schemes, allocations_for_ministry_of_new_renewable_energy, allocations_for_schemes_under_mnre, persons_with_disabilities, allocations_for_schemes_related_to_climate_change_adaptation, allocations_for_selective_missions_under_napcc) {
             table_data["budget_overview"] = budget_overview;
             table_data["transfer_of_resources_to_states"] = transfer_of_resources_to_states;
             table_data["total_cess_and_surcharges"] = total_cess_and_surcharges;
@@ -243,6 +245,8 @@
             table_data["allocations_for_ministry_of_new_renewable_energy"] = allocations_for_ministry_of_new_renewable_energy;
             table_data["allocations_for_schemes_under_mnre"] = allocations_for_schemes_under_mnre;
             table_data["persons_with_disabilities"] = persons_with_disabilities;
+            table_data["allocations_for_schemes_related_to_climate_change_adaptation"] = allocations_for_schemes_related_to_climate_change_adaptation;
+            table_data["allocations_for_selective_missions_under_napcc"] = allocations_for_selective_missions_under_napcc;
             setup_environment(table_data)
 
 

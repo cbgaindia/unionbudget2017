@@ -34,3 +34,7 @@
     padding: 0px;
     border-radius: 0%;    
 }
+
+.wy-menu-vertical li.current a {
+    color: black;
+}
