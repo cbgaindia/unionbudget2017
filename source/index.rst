@@ -38,8 +38,8 @@ Contents
    climate_change/index
    women/index
    children/index
-   dalits/index
-   adivasis/index
+   scheduled_castes/index
+   scheduled_tribes/index
    religious_minorities/index
    social_security/index
    urban_poor/index
