@@ -145,6 +145,10 @@
             display: none;
         }
     }
+
+    rect{
+        fill:none;
+    }
     </style>
 </head>
 
@@ -658,6 +662,8 @@
     </script>
     <script>
     d3.select('#saveButton').on('click', function() {
+        d3.selectAll(".nv-linesWrap path").style({ 'fill':'none' });
+        d3.selectAll("rect").style({ 'fill':'none'});
         
         svg = d3.select("#chart1 svg")
     
