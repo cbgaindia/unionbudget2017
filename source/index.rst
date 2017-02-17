@@ -13,7 +13,9 @@ About the Tool
 
 .. _Centre for Budget and Governance Accountability (CBGA): http://www.cbgaindia.org/
 
-It presents a comprehensive analysis of the priorities and proposals in Union Budget 2017-18, focusing on social sectors (such as education, health, drinking water and sanitation, food security etc.) and the responsiveness of the Budget towards the vulnerable sections of the population (such as women, children, dalits, adivasis, religious minorities and urban poor). It also looks closely at the progressivity in the taxation policies adopted in the latest Budget.
+It presents a comprehensive analysis of the priorities and proposals in Union Budget 2017-18, focusing on social sectors (such as education, health, drinking water and sanitation, food security etc.) and the responsiveness of the Budget towards the vulnerable sections of the population (such as women, children, dalits, adivasis, religious minorities and urban poor). It also looks closely at the progressivity in the taxation policies adopted in the latest Budget. Moreover, you can now access machine-readable data for Union Budget 2017-18 at `OpenBudgetsIndia.org`_, to derive your own analysis and visualizations.
+
+.. _OpenBudgetsIndia.org: https://openbudgetsindia.org/dataset?tags=union+budget+2017
 
 We would be glad to get your feedback and suggestions as well as queries for additional information (at info@cbgaindia.org), which would help us improve our efforts in future.
 
