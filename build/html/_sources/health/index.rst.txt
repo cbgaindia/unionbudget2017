@@ -7,9 +7,9 @@ Contents:
     :maxdepth: 2
     
     highlights
-    department_of_health_&_family_welfare
+    department_of_health_and_family_welfare
     department_of_health_research
-    ministry_of_health_&_family_welfare
+    ministry_of_health_and_family_welfare
     ministry_of_ayush
     national_health_mission
     pradhan_mantri_swasthya_suraksha_yojana
