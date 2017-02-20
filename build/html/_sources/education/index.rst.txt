@@ -13,6 +13,8 @@ Contents:
     nem_sarva_shiksha_abhiyan
     nem_rastriya_madhyamik_shiksha_abhiyan
     nem_teacher_training_and_saakshar_bharat
+    strengthening_of_teacher_training_institutions
+    saakshar_bharat
     kendriya_vidyalaya_sangathan
     navodaya_vidyalaya_sanghatan
     mid_day_meal

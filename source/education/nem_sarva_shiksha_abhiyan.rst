@@ -1,5 +1,5 @@
-Sarva Shiksha Abhiyan
-=====================
+National Education Mission - Sarva Shiksha Abhiyan
+==================================================
 
 .. raw:: html
 

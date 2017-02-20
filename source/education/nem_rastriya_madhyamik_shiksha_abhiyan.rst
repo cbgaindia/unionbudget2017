@@ -1,5 +1,5 @@
-Rashtriya Madhyamik Shiksha Abhiyan
-===================================
+National Education Mission - Rashtriya Madhyamik Shiksha Abhiyan
+================================================================
 
 .. raw:: html
 

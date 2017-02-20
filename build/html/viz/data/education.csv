@@ -1,12 +1,14 @@
-slug_name,index_name,2012-13,2013-14,2014-15,2015-16,2016-17(BE),2016-17(RE),2017-18(BE),alias,unit,color,viz_type,notes
-dept_of_school_education_and_literacy,Dept. of School Education and Literacy,45631,46856,45722,41800,43554,43896,46356,,Rs crore,#046380,simple_bar,
-dept_of_higher_education,Dept. of Higher Education,20423,24465,23152,25439,28840,29703,33330,,Rs crore,#046381,simple_bar,
-education_-_education_by_ministry_of_human_resource_development(mhrd),Education - Education by Ministry of Human Resource Development(MHRD),66055,71321,68875,67239,72394,73599,79686,,Rs crore,#046382,simple_bar,
-union_govt_spending_on_education_as_%_of_gdp,Union Govt. spending on Education as % of GDP,0.66,0.63,0.55,0.49,0.48,0.49,0.47,,Percentage of GDP,#046383,simple_bar,
-union_govt_spending_on_education_as_%_of_union_budget,Union Govt. spending on Education as % of Union budget,4.7,4.6,4.1,3.8,3.7,3.7,3.7,,Percentage of Total Union Budget,#046384,simple_bar,
-nem-sarva_shiksha_abhiyan_(ssa),NEM-Sarva Shiksha Abhiyan (SSA),...,...,24097,21661,22500,22500,23500,,Rs crore,#046386,simple_bar,"National Education Mission(NEM): Saakshar Bharat-Important Schemes under this Umbrella are schemes of Literacy Campaigns & Operation Restoration, Support to NGOs/Institutions/SRCs for Adult Education & Skill Development, Directorate of Adult Education and National Literacy Mission Authority"
-nem-rastriya_madhyamik_shiksha_abhiyan_(rmsa),NEM-Rastriya Madhyamik Shiksha Abhiyan (RMSA),...,...,3398,3563,3700,3700,3830,,Rs crore,#046387,simple_bar,"National Education Mission(NEM): Saakshar Bharat-Important Schemes under this Umbrella are schemes of Literacy Campaigns & Operation Restoration, Support to NGOs/Institutions/SRCs for Adult Education & Skill Development, Directorate of Adult Education and National Literacy Mission Authority"
-nem-teacher_training_and_saakshar_bharat,NEM-Teacher Training and Saakshar Bharat,...,...,1158,830,879,751,926,,Rs crore,#046389,simple_bar,"National Education Mission(NEM): Saakshar Bharat-Important Schemes under this Umbrella are schemes of Literacy Campaigns & Operation Restoration, Support to NGOs/Institutions/SRCs for Adult Education & Skill Development, Directorate of Adult Education and National Literacy Mission Authority"
-kendriya_vidyalaya_sangathan,Kendriya Vidyalaya Sangathan,...,...,3243,3563,3795,3987,4300,,Rs crore,#046392,simple_bar,"National Education Mission(NEM): Saakshar Bharat-Important Schemes under this Umbrella are schemes of Literacy Campaigns & Operation Restoration, Support to NGOs/Institutions/SRCs for Adult Education & Skill Development, Directorate of Adult Education and National Literacy Mission Authority"
-navodaya_vidyalaya_sanghatan,Navodaya Vidyalaya Sanghatan,...,...,2013,2285,2471,2615,2700,,Rs crore,#046393,simple_bar,"National Education Mission(NEM): Saakshar Bharat-Important Schemes under this Umbrella are schemes of Literacy Campaigns & Operation Restoration, Support to NGOs/Institutions/SRCs for Adult Education & Skill Development, Directorate of Adult Education and National Literacy Mission Authority"
-mid_day_meal_(mdm),Mid Day Meal (MDM),...,...,10523,9145,9700,9700,10000,,Rs crore,#046394,simple_bar,"National Education Mission(NEM): Saakshar Bharat-Important Schemes under this Umbrella are schemes of Literacy Campaigns & Operation Restoration, Support to NGOs/Institutions/SRCs for Adult Education & Skill Development, Directorate of Adult Education and National Literacy Mission Authority"
+slug_name,index_name,2012-13,2013-14,2014-15,2015-16,2016-17(BE),2016-17(RE),2017-18(BE),unit,color
+dept_of_school_education_and_literacy,Dept. of School Education and Literacy,45631,46856,45722,41800,43554,43896,46356,Rs crore,#046380
+dept_of_higher_education,Dept. of Higher Education,20423,24465,23152,25439,28840,29703,33330,Rs crore,#046380
+education_-_education_by_ministry_of_human_resource_development(mhrd),Education - Education by Ministry of Human Resource Development(MHRD),66055,71321,68875,67239,72394,73599,79686,Rs crore,#046380
+union_govt_spending_on_education_as_%_of_gdp,Union Govt. spending on Education as % of GDP,0.66,0.63,0.55,0.49,0.48,0.49,0.47,Percentage of GDP,#046380
+union_govt_spending_on_education_as_%_of_union_budget,Union Govt. spending on Education as % of Union budget,4.7,4.6,4.1,3.8,3.7,3.7,3.7,Percentage of Total Union Budget,#046380
+nem-sarva_shiksha_abhiyan_(ssa),NEM-Sarva Shiksha Abhiyan (SSA),...,24802,24097,21661,22500,22500,23500,Rs crore,#046380
+nem-rastriya_madhyamik_shiksha_abhiyan_(rmsa),NEM-Rastriya Madhyamik Shiksha Abhiyan (RMSA),...,2679,3398,3563,3700,3700,3830,Rs crore,#046380
+nem-teacher_training_and_saakshar_bharat,NEM-Teacher Training and Saakshar Bharat,...,1090,1158,830,879,751,926,Rs crore,#046380
+strengthening_of_teacher_training_institutions,Strengthening of Teacher Training Institutions,...,508,500,489,480,480,480,Rs crore,#046380
+saakshar_bharat,Saakshar Bharat,...,297,358,344,320,244,320,Rs crore,#046380
+kendriya_vidyalaya_sangathan,Kendriya Vidyalaya Sangathan,...,2827,3243,3563,3795,3987,4300,Rs crore,#046380
+navodaya_vidyalaya_sanghatan,Navodaya Vidyalaya Sanghatan,...,1746,2013,2285,2471,2615,2700,Rs crore,#046380
+mid_day_meal_(mdm),Mid Day Meal (MDM),...,10918,10523,9145,9700,9700,10000,Rs crore,#046380
