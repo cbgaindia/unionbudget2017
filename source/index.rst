@@ -28,7 +28,6 @@ Contents
 
    budget_overview/index
    transfer_of_resources_to_states/index
-   total_cess_and_surcharges    
    total_expenditure_by_select_ministries/index
    taxation/index
    education/index
