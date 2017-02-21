@@ -17,3 +17,4 @@ Contents:
 	states_share_of_central_taxes_and_duties_as_of_gdp
 	other_transfers_as_share_of_gdp
 	total_union_resources_transferred_to_states_as_of_gdp
+        total_cess_and_surcharges
